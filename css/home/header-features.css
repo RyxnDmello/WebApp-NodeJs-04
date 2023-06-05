@@ -1,3 +1,7 @@
+/*--------------------------------------------------------*/
+/*---------------- HEADER FEATURES STYLES ----------------*/
+/*--------------------------------------------------------*/
+
 .header-features-container {
   grid-template-columns: auto;
   justify-content: center;
@@ -6,31 +10,41 @@
   gap: 1.5rem;
 }
 
+/*------------------------------------------*/
+/*---------------- CAROUSEL ----------------*/
+/*------------------------------------------*/
+
 .header-features-carousel {
-  justify-content: start;
   grid-auto-flow: column;
+  justify-content: start;
   align-items: center;
   overflow: hidden;
-  padding: 1rem;
+  padding: 0 1rem;
   display: grid;
-  width: 373px;
+  width: 432px;
   gap: 0 1rem;
 }
 
+/*------------------------------------------*/
+/*-------------- SLIDE STYLES --------------*/
+/*------------------------------------------*/
+
 .header-feature-slide {
-  transition: translate 500ms;
   grid-template-columns: auto;
-  justify-content: center;
+  justify-content: stretch;
   align-items: center;
   display: grid;
   gap: 1.5rem 0;
-  width: 341px;
+  width: 400px;
 }
 
+/*-----------------------------------------*/
+/*-------------- SLIDE POINT --------------*/
+/*-----------------------------------------*/
+
 .header-feature-point {
+  justify-content: space-between;
   border: 2px solid #fff;
-  box-shadow: 5px 5px 5px;
-  justify-content: center;
   grid-auto-flow: column;
   border-radius: 10px;
   align-items: center;
@@ -40,7 +54,7 @@
 }
 
 .header-feature-point-image {
-  filter: drop-shadow(2px 2px 2.5px);
+  filter: drop-shadow(5px 5px 2.5px);
   width: 80px;
 }
 
@@ -51,6 +65,10 @@
   color: #fff;
 }
 
+/*----------------------------------------*/
+/*-------------- CONTROLLER --------------*/
+/*----------------------------------------*/
+
 .header-features-controller-container {
   justify-content: space-between;
   grid-auto-flow: column;
@@ -59,5 +77,65 @@
 }
 
 .header-feature-slide-option {
+  transition: scale 400ms, opacity 400ms;
+  cursor: pointer;
+  opacity: 0.25;
   width: 50px;
 }
+
+.header-feature-slide-option:nth-of-type(1) {
+  opacity: 1;
+}
+
+/*---------------------------------------*/
+/*------------- TRANSITIONS -------------*/
+/*---------------------------------------*/
+
+.header-feature-slide-option:hover {
+  scale: 1.1;
+}
+
+/*----------------------------------------*/
+/*-------------- ANIMATIONS --------------*/
+/*----------------------------------------*/
+
+.header-feature-slide:nth-of-type(n + 2) {
+  translate: -40px 0;
+  opacity: 0;
+}
+
+.header-slide-fade-out {
+  animation: HeaderSlideFadeOut 450ms forwards;
+}
+
+.header-slide-fade-in {
+  animation: HeaderSlideFadeIn 450ms forwards;
+}
+
+@keyframes HeaderSlideFadeOut {
+  from {
+    translate: 0 0;
+    opacity: 1;
+  }
+
+  to {
+    translate: -40px 0;
+    opacity: 0;
+  }
+}
+
+@keyframes HeaderSlideFadeIn {
+  from {
+    translate: 40px 0;
+    opacity: 0;
+  }
+
+  to {
+    translate: 0 0;
+    opacity: 1;
+  }
+}
+
+/*----------------------------------------------*/
+/*----------------- END OF CSS -----------------*/
+/*----------------------------------------------*/

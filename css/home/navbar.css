@@ -1,0 +1,41 @@
+/*-----------------------------------------------------*/
+/*------------------- NAVBAR STYLES -------------------*/
+/*-----------------------------------------------------*/
+
+nav {
+  justify-content: space-between;
+  grid-auto-flow: column;
+  align-items: center;
+  grid-column: span 2;
+  display: grid;
+}
+
+.nav-logo-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+/*-------------------------------------------*/
+/*------------- REGISTER STYLES -------------*/
+/*-------------------------------------------*/
+
+.nav-register-container {
+  justify-content: center;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+  gap: 1rem;
+}
+
+.nav-register-link-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+/*--------------------------------------------------*/
+/*------------------- END OF CSS -------------------*/
+/*--------------------------------------------------*/

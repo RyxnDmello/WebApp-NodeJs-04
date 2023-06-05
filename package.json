@@ -1,0 +1,21 @@
+{
+  "name": "cloud-sense",
+  "version": "1.0.0",
+  "description": "Weather Web Application",
+  "main": "index.js",
+  "scripts": {
+    "test": "cls && node --version && npm --version && npm list"
+  },
+  "keywords": [
+    "Weather"
+  ],
+  "author": "Ryan D Mello",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.1.3",
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "nodemon": "^2.0.22"
+  }
+}

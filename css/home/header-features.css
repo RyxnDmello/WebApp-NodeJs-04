@@ -1,0 +1,63 @@
+.header-features-container {
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.header-features-carousel {
+  justify-content: start;
+  grid-auto-flow: column;
+  align-items: center;
+  overflow: hidden;
+  padding: 1rem;
+  display: grid;
+  width: 373px;
+  gap: 0 1rem;
+}
+
+.header-feature-slide {
+  transition: translate 500ms;
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  gap: 1.5rem 0;
+  width: 341px;
+}
+
+.header-feature-point {
+  border: 2px solid #fff;
+  box-shadow: 5px 5px 5px;
+  justify-content: center;
+  grid-auto-flow: column;
+  border-radius: 10px;
+  align-items: center;
+  padding: 1rem 2rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.header-feature-point-image {
+  filter: drop-shadow(2px 2px 2.5px);
+  width: 80px;
+}
+
+.header-feature-point-text {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.header-features-controller-container {
+  justify-content: space-between;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+}
+
+.header-feature-slide-option {
+  width: 50px;
+}

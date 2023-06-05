@@ -1,0 +1,14 @@
+@import url("./home/header-form.css");
+@import url("./home/header-features.css");
+@import url("./home/navbar.css");
+
+* {
+  box-sizing: border-box;
+  text-decoration: none;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: relative;
+}

@@ -7,17 +7,20 @@
 }
 
 .weather-container {
-  background-color: #00000080;
+  box-shadow: 0 0 20px #00000060;
+  background-color: #000000af;
   grid-template-columns: auto;
+  transition: height 600ms;
   justify-content: stretch;
-  align-items: center;
+  align-items: stretch;
   position: relative;
   border-radius: 5px;
   overflow: hidden;
   cursor: default;
   padding: 2rem;
   display: grid;
-  gap: 3rem 0;
+  height: 170px;
+  gap: 5rem 0;
 }
 
 .weather-background {
@@ -28,6 +31,41 @@
   z-index: -1;
 }
 
+.header-expanded {
+  background-color: #00000080;
+}
+
+/*--------------------------------------*/
+/*----------- WEATHER BUTTON -----------*/
+/*--------------------------------------*/
+
+.weather-expand-button,
+.weather-collapse-button {
+  transition: scale 250ms, opacity 250ms;
+  filter: drop-shadow(2.5px 2.5px 4px);
+  position: absolute;
+  cursor: pointer;
+  width: 40px;
+}
+
+.weather-expand-button {
+  margin: 0 auto;
+  bottom: 1rem;
+  right: 0;
+  left: 0;
+}
+
+.weather-collapse-button {
+  pointer-events: none;
+  bottom: 2rem;
+  right: 1rem;
+  opacity: 0;
+}
+
+/*-----------------------------------------*/
+/*------------- HEADER STYLES -------------*/
+/*-----------------------------------------*/
+
 .weather-header {
   justify-content: space-between;
   grid-auto-flow: column;
@@ -36,7 +74,7 @@
 }
 
 /*-----------------------------------------*/
-/*------------- HEADER STYLES -------------*/
+/*------------ LOCATION STYLES ------------*/
 /*-----------------------------------------*/
 
 .weather-location-block {
@@ -93,6 +131,15 @@
   font-size: 1.25rem;
   color: #bababa;
   font-weight: 300;
+}
+
+/*----------------------------------------*/
+/*-------------- TRANSITION --------------*/
+/*----------------------------------------*/
+
+.weather-expand-button:hover,
+.weather-collapse-button:hover {
+  scale: 1.1;
 }
 
 /*--------------------------------------------*/

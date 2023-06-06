@@ -1,0 +1,158 @@
+/*-------------------------------------------------*/
+/*---------------- FEATURES STYLES ----------------*/
+/*-------------------------------------------------*/
+
+.weather-features {
+  grid-auto-flow: column;
+  justify-content: left;
+  align-items: stretch;
+  display: grid;
+  gap: 2rem;
+}
+
+/*---------------------------------------------*/
+/*---------------- CARD STYLES ----------------*/
+/*---------------------------------------------*/
+
+.weather-card {
+  box-shadow: 0 0 15px #00000060;
+  grid-template-columns: auto;
+  border: 2px solid #fff;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 1rem;
+  display: grid;
+}
+
+.weather-card-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.weather-card-divider {
+  border-bottom: 2px solid #ffffff50;
+  border-radius: 40px;
+  border-radius: none;
+  border-left: none;
+  border-top: none;
+}
+
+/*--------------------------------------------*/
+/*------------- CARD MAIN STYLES -------------*/
+/*--------------------------------------------*/
+
+.weather-card-main {
+  grid-auto-flow: column;
+  justify-content: left;
+  align-items: center;
+  display: grid;
+}
+
+.weather-card-main-image {
+  width: 80px;
+}
+
+.weather-card-main-value {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-size: 5rem;
+  color: #fff;
+}
+
+/*-------------------------------------------*/
+/*------------- CARD SUB STYLES -------------*/
+/*-------------------------------------------*/
+
+.weather-card-sub-list {
+  justify-content: space-between;
+  grid-auto-flow: column;
+  align-items: center;
+  margin-top: 1rem;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.weather-card-sub {
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.weather-card-sub-name {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.weather-card-sub-value {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  font-weight: 300;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.weather-card-sub-image {
+  margin: 0 auto;
+  width: 40px;
+}
+
+/*-------------------------------------------*/
+/*-------------- POINTS STYLES --------------*/
+/*-------------------------------------------*/
+
+.weather-points-list {
+  grid-template-columns: repeat(2, auto);
+  justify-content: center;
+  align-items: stretch;
+  display: grid;
+  gap: 1rem;
+}
+
+.weather-point {
+  box-shadow: 0 0 15px #00000060;
+  grid-template-columns: auto;
+  border: 2px solid #fff;
+  justify-content: left;
+  border-radius: 10px;
+  align-items: center;
+  padding: 1rem;
+  display: grid;
+}
+
+.weather-point-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.weather-point-container {
+  grid-auto-flow: column;
+  justify-content: left;
+  align-items: center;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.weather-point-value {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.weather-point-image {
+  width: 40px;
+}
+
+/*--------------------------------------------*/
+/*---------------- END OF CSS ----------------*/
+/*--------------------------------------------*/

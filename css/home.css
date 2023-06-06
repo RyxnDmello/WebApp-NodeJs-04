@@ -1,6 +1,9 @@
+@import url("./home/navbar.css");
+
 @import url("./home/header-form.css");
 @import url("./home/header-features.css");
-@import url("./home/navbar.css");
+@import url("./home/weather-features.css");
+@import url("./home/weather-header.css");
 
 * {
   box-sizing: border-box;

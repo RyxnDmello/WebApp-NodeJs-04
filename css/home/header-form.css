@@ -5,14 +5,14 @@
 header {
   grid-template-columns: repeat(2, auto);
   background-color: #000000af;
+  padding: 2rem 6rem 4rem 6rem;
   justify-content: stretch;
   box-shadow: 0 5px 10px;
   align-items: center;
   position: relative;
-  padding: 2rem 6rem;
   overflow: hidden;
   display: grid;
-  gap: 4rem 0;
+  gap: 6rem 0;
 }
 
 .header-background {

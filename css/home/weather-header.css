@@ -3,20 +3,44 @@
 /*------------------------------------------------*/
 
 #weather {
+  grid-template-columns: auto;
+  justify-content: stretch;
+  align-items: center;
   padding: 4rem 2rem;
+  cursor: default;
+  display: grid;
+  gap: 2rem;
 }
 
-.weather-container {
+.weather-title {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  font-size: 4rem;
+  color: #000;
+}
+
+/*----------------------------------------------*/
+/*--------------- STATION STYLES ---------------*/
+/*----------------------------------------------*/
+
+.weather-station-list {
+  grid-template-columns: auto;
+  justify-content: stretch;
+  align-items: center;
+  display: grid;
+  gap: 2rem 0;
+}
+
+.weather-station {
+  transition: height 650ms, background-color 650ms;
   box-shadow: 0 0 20px #00000060;
   background-color: #000000af;
   grid-template-columns: auto;
-  transition: height 600ms;
   justify-content: stretch;
   align-items: stretch;
   position: relative;
   border-radius: 5px;
   overflow: hidden;
-  cursor: default;
   padding: 2rem;
   display: grid;
   height: 170px;
@@ -31,7 +55,7 @@
   z-index: -1;
 }
 
-.header-expanded {
+.container-expanded {
   background-color: #00000080;
 }
 

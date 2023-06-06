@@ -1,0 +1,54 @@
+<%- include("./navbar.ejs") %>
+
+<article class="header-information-container">
+  <div class="header-text-container">
+    <h1 class="header-title">CloudSense</h1>
+
+    <p class="header-description">
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam
+      inventore distinctio provident placeat quia? Doloremque voluptate odit
+      magni quod beatae?
+    </p>
+  </div>
+
+  <div class="header-links-container">
+    <a class="header-link" href="#create">
+      <h4 class="header-link-text">Create</h4>
+      <img class="header-link-image" src="/buttons/add.png" />
+    </a>
+
+    <a class="header-link" href="#weather">
+      <h4 class="header-link-text">Explore</h4>
+      <img class="header-link-image" src="/buttons/eye.png" />
+    </a>
+  </div>
+</article>
+
+<article class="header-features-container">
+  <article class="header-features-carousel">
+    <% for(let i = 0; i < 4; i++) { %>
+    <div class="header-feature-slide">
+      <div class="header-feature-point">
+        <img class="header-feature-point-image" src="/home/header/earth.png" />
+        <h2 class="header-feature-point-text">Worldwide Weather</h2>
+      </div>
+
+      <div class="header-feature-point">
+        <h2 class="header-feature-point-text">Accurate Details</h2>
+        <img class="header-feature-point-image" src="/home/header/earth.png" />
+      </div>
+    </div>
+    <% } %>
+  </article>
+
+  <div class="header-features-controller-container">
+    <% for(let i = 0; i < 4; i++) { %>
+    <img
+      src="/buttons/circle-<%= i + 1 %>.png"
+      class="header-feature-slide-option"
+    />
+    <% } %>
+  </div>
+</article>
+
+<img class="header-background" src="/home/header/background.jpg" />

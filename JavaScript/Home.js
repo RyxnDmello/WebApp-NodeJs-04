@@ -1,5 +1,5 @@
 import HeaderCarousel from "./home/HeaderCarousel.js";
-import WeatherContainer from "./home/WeatherContainer.js";
+import WeatherStation from "././home/WeatherStation.js";
 
 HeaderCarousel();
-WeatherContainer();
+WeatherStation();

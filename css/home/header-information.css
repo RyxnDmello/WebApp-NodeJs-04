@@ -1,0 +1,141 @@
+/*-----------------------------------------------------*/
+/*------------------- HEADER STYLES -------------------*/
+/*-----------------------------------------------------*/
+
+header {
+  grid-template-columns: repeat(2, auto);
+  background-color: #000000af;
+  padding: 2rem 6rem 4rem 6rem;
+  justify-content: stretch;
+  box-shadow: 0 5px 10px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  gap: 4rem 0;
+}
+
+.header-background {
+  position: absolute;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  z-index: -2;
+  top: 0;
+}
+
+/*--------------------------------------------*/
+/*------------ INFORMATION STYLES ------------*/
+/*--------------------------------------------*/
+
+.header-information-container {
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  gap: 1.5rem;
+}
+
+/*-------------------------------------------*/
+/*--------------- TEXT STYLES ---------------*/
+/*-------------------------------------------*/
+
+.header-title {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 6.5rem;
+  font-weight: 200;
+  cursor: default;
+  color: #fff;
+}
+
+.header-description {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 200;
+  color: #d2d2d2;
+  cursor: default;
+}
+
+/*--------------------------------------------*/
+/*--------------- LINKS STYLES ---------------*/
+/*--------------------------------------------*/
+
+.header-links-container {
+  grid-auto-flow: column;
+  justify-content: left;
+  align-items: center;
+  display: grid;
+  gap: 1rem;
+}
+
+.header-link {
+  transition: translate 150ms;
+  box-shadow: 0 0 10px #000;
+  border: 2px solid #fff;
+  justify-content: center;
+  grid-auto-flow: column;
+  padding: 0.25rem 2rem;
+  border-radius: 2.5px;
+  align-items: center;
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.header-link::before {
+  background-color: #fff;
+  transition: width 300ms;
+  position: absolute;
+  z-index: -1;
+  content: "";
+  width: 0%;
+  bottom: 0;
+  left: 0;
+  top: 0;
+}
+
+.header-link-image {
+  transition: filter 300ms;
+}
+
+.header-link:nth-of-type(1) .header-link-image {
+  width: 25px;
+}
+
+.header-link:nth-of-type(2) .header-link-image {
+  width: 30px;
+}
+
+.header-link-text {
+  font-family: "Poppins", sans-serif;
+  transition: color 300ms;
+  letter-spacing: 0.5px;
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+/*---------------------------------------------*/
+/*---------------- TRANSITIONS ----------------*/
+/*---------------------------------------------*/
+
+.header-link:focus {
+  translate: 0 5px;
+}
+
+.header-link:hover::before {
+  width: 100%;
+}
+
+.header-link:hover .header-link-text {
+  color: #000;
+}
+
+.header-link:hover .header-link-image {
+  filter: invert(1);
+}
+
+/*--------------------------------------------------*/
+/*------------------- END OF CSS -------------------*/
+/*--------------------------------------------------*/

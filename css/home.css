@@ -1,11 +1,12 @@
 @import url("./home/navbar.css");
 
-@import url("./home/header-form.css");
+@import url("./home/header-information.css");
 @import url("./home/header-features.css");
 @import url("./home/weather-features.css");
 @import url("./home/weather-header.css");
 
 * {
+  scroll-behavior: smooth;
   box-sizing: border-box;
   text-decoration: none;
   padding: 0;

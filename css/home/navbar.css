@@ -10,11 +10,10 @@ nav {
   display: grid;
 }
 
-.nav-logo-text {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.25rem;
-  font-weight: 300;
-  color: #fff;
+.nav-logo-image {
+  transition: scale 300ms, translate 150ms;
+  filter: drop-shadow(4px 4px 4px #000);
+  width: 40px;
 }
 
 /*-------------------------------------------*/
@@ -26,14 +25,70 @@ nav {
   grid-auto-flow: column;
   align-items: center;
   display: grid;
-  gap: 1rem;
+  gap: 1.5rem;
+}
+
+.nav-register-link.create {
+  transition: background-color 300ms, translate 150ms;
+  box-shadow: 0 0 6.5px #000;
+  border: 2px solid #fff;
+  justify-content: center;
+  grid-auto-flow: column;
+  padding: 0.25rem 2rem;
+  align-items: center;
+  border-radius: 40px;
+  display: grid;
+  gap: 0.5rem;
 }
 
 .nav-register-link-text {
   font-family: "Poppins", sans-serif;
+  transition: color 300ms;
+  letter-spacing: 0.65px;
   font-size: 1.25rem;
   font-weight: 300;
   color: #fff;
+}
+
+.nav-register-link.login .nav-register-link-text {
+  text-shadow: 2.5px 2.5px 5px #000;
+}
+
+.nav-register-link.create .nav-register-link-text {
+  font-weight: 400;
+}
+
+.nav-register-link-image {
+  transition: filter 300ms;
+  width: 20px;
+}
+
+/*----------------------------------------*/
+/*-------------- TRANSITION --------------*/
+/*----------------------------------------*/
+
+.nav-logo:hover .nav-logo-image {
+  scale: 1.1;
+}
+
+.nav-logo:focus .nav-logo-image {
+  translate: 0 -5px;
+}
+
+.nav-register-link.create:hover {
+  background-color: #fff;
+}
+
+.nav-register-link.create:focus {
+  translate: 0 5px;
+}
+
+.nav-register-link.create:hover .nav-register-link-text {
+  color: #000;
+}
+
+.nav-register-link.create:hover .nav-register-link-image {
+  filter: invert(1);
 }
 
 /*--------------------------------------------------*/

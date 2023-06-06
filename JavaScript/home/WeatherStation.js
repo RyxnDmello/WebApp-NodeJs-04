@@ -40,13 +40,17 @@ function AnimateButtons(index) {
     expandButtons[index].style.pointerEvents = "none";
     expandButtons[index].style.opacity = 0;
 
-    collapseButtons[index].style.pointerEvents = "all";
-    collapseButtons[index].style.opacity = 1;
+    setTimeout(() => {
+      collapseButtons[index].style.pointerEvents = "all";
+      collapseButtons[index].style.opacity = 1;
+    }, 650);
     return;
   }
 
-  expandButtons[index].style.pointerEvents = "all";
-  expandButtons[index].style.opacity = 1;
+  setTimeout(() => {
+    expandButtons[index].style.pointerEvents = "all";
+    expandButtons[index].style.opacity = 1;
+  }, 650);
 
   collapseButtons[index].style.pointerEvents = "none";
   collapseButtons[index].style.opacity = 0;

@@ -6,7 +6,7 @@
   grid-template-columns: auto;
   justify-content: stretch;
   align-items: center;
-  padding: 4rem 2rem;
+  padding: 5rem 4rem;
   cursor: default;
   display: grid;
   gap: 2rem;
@@ -14,7 +14,8 @@
 
 .weather-title {
   font-family: "Josefin Sans", sans-serif;
-  font-weight: 300;
+  text-shadow: 2px 2px 4px #00000060;
+  font-weight: 400;
   font-size: 4rem;
   color: #000;
 }
@@ -110,12 +111,14 @@
 }
 
 .weather-location-image {
+  filter: drop-shadow(2.5px 2.5px 0.5px #00000060);
   width: 50px;
 }
 
 .weather-location-name {
+  text-shadow: 2.5px 2.5px 1.25px #00000050;
   font-family: "Poppins", sans-serif;
-  font-weight: 300;
+  font-weight: 200;
   font-size: 3rem;
   color: #fff;
 }
@@ -133,6 +136,7 @@
 }
 
 .weather-details-image {
+  filter: drop-shadow(2.5px 2.5px 0.5px #00000060);
   width: 80px;
 }
 
@@ -144,17 +148,19 @@
 }
 
 .weather-details-type {
+  text-shadow: 2.5px 2.5px 1.25px #00000050;
   font-family: "Poppins", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-size: 2rem;
   color: #fff;
 }
 
 .weather-details-description {
+  text-shadow: 2.5px 2.5px 1.25px #00000050;
   font-family: "Poppins", sans-serif;
   font-size: 1.25rem;
   color: #bababa;
-  font-weight: 300;
+  font-weight: 200;
 }
 
 /*----------------------------------------*/

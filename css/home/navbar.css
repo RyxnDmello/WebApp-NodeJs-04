@@ -13,7 +13,7 @@ nav {
 .nav-logo-image {
   transition: scale 300ms, translate 150ms;
   filter: drop-shadow(4px 4px 4px #000);
-  width: 40px;
+  width: 45px;
 }
 
 /*-------------------------------------------*/

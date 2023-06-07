@@ -1,10 +1,19 @@
+/*------------------------------------------------------*/
+/*------------------- CURRENT STYLES -------------------*/
+/*------------------------------------------------------*/
+
 #current {
+  box-shadow: 0 5px 10px #00000080, 0 -5px 10px #00000080;
   grid-template-columns: repeat(2, auto);
   justify-content: space-between;
-  padding: 4rem 4rem 2rem 4rem;
+  background-color: #000000a0;
   align-items: center;
+  position: relative;
+  padding: 2rem 4rem;
+  margin-top: 4rem;
+  overflow: hidden;
   display: grid;
-  gap: 3rem 0;
+  gap: 2rem 0;
 }
 
 .current-title {
@@ -12,30 +21,33 @@
   text-shadow: 2.5px 2.5px 5px #00000060;
   grid-column: span 2;
   letter-spacing: 2px;
+  font-weight: 100;
   font-size: 4rem;
-  color: #000;
+  color: #fff;
 }
 
-.current-form {
-  box-shadow: 4px 4px 10px #00000060;
-  background-color: #00000080;
-  grid-template-columns: auto;
-  justify-content: stretch;
-  border-radius: 2.5px;
-  padding: 1.5rem 1rem;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  display: grid;
-  gap: 1.5rem;
-}
-
-.form-background {
+.current-background {
   position: absolute;
   object-fit: cover;
   height: 100%;
   width: 100%;
   z-index: -1;
+}
+
+/*-------------------------------------------*/
+/*--------------- FORM STYLES ---------------*/
+/*-------------------------------------------*/
+
+.current-form {
+  grid-template-columns: auto;
+  justify-content: stretch;
+  border-radius: 2.5px;
+  padding: 2rem 1.5rem;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  gap: 1.5rem;
 }
 
 .current-input-block {
@@ -48,19 +60,84 @@
 
 .current-input-label {
   font-family: "Josefin Sans", sans-serif;
+  text-shadow: 2.5px 2.5px 2.5px #000;
   font-size: 1.65rem;
   font-weight: 300;
   color: #fff;
 }
 
 .current-input {
+  box-shadow: 2.5px 2.5px 2.5px #00000050;
   font-family: "Poppins", sans-serif;
+  transition: border-color 450ms;
   background-color: transparent;
-  border: 2px solid #ffffff25;
+  border: 2px solid #fff;
+  padding: 0.25rem 0.5rem;
   letter-spacing: 0.5px;
   border-radius: 2.5px;
-  padding: 0.25rem;
   font-weight: 300;
   font-size: 1rem;
+  cursor: default;
   color: #fff;
 }
+
+.current-input::placeholder {
+  transition: opacity 300ms;
+  font-weight: 400;
+  opacity: 0;
+}
+
+.current-button {
+  transition: background-color 300ms, translate 200ms;
+  box-shadow: 2.5px 2.5px 2.5px #00000050;
+  border: 2px solid #fff;
+  justify-content: center;
+  grid-auto-flow: column;
+  border-radius: 40px;
+  align-items: center;
+  padding: 0.3rem 0;
+  display: grid;
+  gap: 0 0.5rem;
+}
+
+.current-button-text {
+  font-family: "Poppins", sans-serif;
+  transition: color 300ms;
+  letter-spacing: 0.5px;
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: #fff;
+}
+
+.current-button-image {
+  transition: filter 300ms;
+  width: 20px;
+}
+
+/*------------------------------------------*/
+/*--------------- TRANSITION ---------------*/
+/*------------------------------------------*/
+
+.current-input:hover::placeholder {
+  opacity: 1;
+}
+
+.current-button:hover {
+  background-color: #fff;
+}
+
+.current-button:focus {
+  translate: 0 5px;
+}
+
+.current-button:hover .current-button-image {
+  filter: invert(1);
+}
+
+.current-button:hover .current-button-text {
+  color: #000;
+}
+
+/*--------------------------------------------*/
+/*---------------- END OF CSS ----------------*/
+/*--------------------------------------------*/

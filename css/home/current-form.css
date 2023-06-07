@@ -1,0 +1,66 @@
+#current {
+  grid-template-columns: repeat(2, auto);
+  justify-content: space-between;
+  padding: 4rem 4rem 2rem 4rem;
+  align-items: center;
+  display: grid;
+  gap: 3rem 0;
+}
+
+.current-title {
+  font-family: "Queenside Regular", sans-serif;
+  text-shadow: 2.5px 2.5px 5px #00000060;
+  grid-column: span 2;
+  letter-spacing: 2px;
+  font-size: 4rem;
+  color: #000;
+}
+
+.current-form {
+  box-shadow: 4px 4px 10px #00000060;
+  background-color: #00000080;
+  grid-template-columns: auto;
+  justify-content: stretch;
+  border-radius: 2.5px;
+  padding: 1.5rem 1rem;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.form-background {
+  position: absolute;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}
+
+.current-input-block {
+  grid-template-columns: auto;
+  justify-content: stretch;
+  align-items: center;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.current-input-label {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.65rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.current-input {
+  font-family: "Poppins", sans-serif;
+  background-color: transparent;
+  border: 2px solid #ffffff25;
+  letter-spacing: 0.5px;
+  border-radius: 2.5px;
+  padding: 0.25rem;
+  font-weight: 300;
+  font-size: 1rem;
+  color: #fff;
+}

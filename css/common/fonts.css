@@ -1,0 +1,22 @@
+/*--------------------------------------------------*/
+/*----------------- QUEENSIDE FONT -----------------*/
+/*--------------------------------------------------*/
+
+@font-face {
+  font-family: "Queenside Regular";
+  src: url("/Queenside Regular.ttf");
+}
+
+@font-face {
+  font-family: "Queenside Light";
+  src: url("/Queenside Light.ttf");
+}
+
+@font-face {
+  font-family: "Queenside Medium";
+  src: url("/Queenside Medium.ttf");
+}
+
+/*--------------------------------------------*/
+/*--------------- END OF FONTS ---------------*/
+/*--------------------------------------------*/

@@ -2,6 +2,9 @@ const containers = document.querySelectorAll(".weather-station");
 const expandButtons = document.querySelectorAll(".weather-expand-button");
 const collapseButtons = document.querySelectorAll(".weather-collapse-button");
 
+const stationExpandedHeight = 520;
+const stationCollapsedHeight = 180;
+
 export default function WeatherStation() {
   WeatherController();
 }
@@ -17,20 +20,15 @@ function WeatherController() {
 }
 
 function Expand(index) {
-  const expandedHeight =
-    containers[index].children[0].clientHeight +
-    containers[index].children[1].clientHeight +
-    325;
-
+  containers[index].style.height = `${stationExpandedHeight}px`;
   containers[index].classList.add("container-expanded");
-  containers[index].style.height = `${expandedHeight}px`;
 
   AnimateButtons(index);
 }
 
 function Collapse(index) {
+  containers[index].style.height = `${stationCollapsedHeight}px`;
   containers[index].classList.remove("container-expanded");
-  containers[index].style.height = "180px";
 
   AnimateButtons(index);
 }

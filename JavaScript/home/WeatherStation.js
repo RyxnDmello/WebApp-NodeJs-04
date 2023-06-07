@@ -30,7 +30,7 @@ function Expand(index) {
 
 function Collapse(index) {
   containers[index].classList.remove("container-expanded");
-  containers[index].style.height = "170px";
+  containers[index].style.height = "180px";
 
   AnimateButtons(index);
 }

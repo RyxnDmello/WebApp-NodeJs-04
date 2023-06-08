@@ -5,7 +5,7 @@
 @import url("./home/header-features.css");
 @import url("./home/weather-features.css");
 @import url("./home/weather-header.css");
-@import url("./home/current-form.css");
+@import url("./home/current.css");
 
 * {
   scroll-behavior: smooth;

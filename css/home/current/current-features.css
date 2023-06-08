@@ -1,0 +1,163 @@
+/*------------------------------------------------*/
+/*---------------- FEATURE STYLES ----------------*/
+/*------------------------------------------------*/
+
+.current-features-list {
+  grid-template-columns: auto;
+  justify-content: stretch;
+  align-items: center;
+  display: grid;
+  gap: 1.5rem 0;
+}
+
+/*---------------------------------------*/
+/*------------- CARD STYLES -------------*/
+/*---------------------------------------*/
+
+.current-feature-card {
+  box-shadow: 0 0 10px #000000af;
+  border: 2px solid #ffffff10;
+  grid-template-columns: auto;
+  justify-content: stretch;
+  border-radius: 10px;
+  align-items: center;
+  padding: 1rem 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.current-feature-card-title {
+  font-family: "Josefin Sans", sans-serif;
+  text-shadow: 2px 2px 1px #00000050;
+  font-weight: 200;
+  font-size: 2rem;
+  color: #fff;
+}
+
+/*--------------------------------------*/
+/*------------ CARD DETAILS ------------*/
+/*--------------------------------------*/
+
+.current-feature-card-details {
+  justify-content: space-between;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+}
+
+.current-feature-card-value {
+  font-family: "Josefin Sans", sans-serif;
+  text-shadow: 2px 2px 1px #00000050;
+  font-weight: 100;
+  font-size: 4rem;
+  color: #fff;
+}
+
+/*-----------------------------------------*/
+/*-------------- CARD BLOCKS --------------*/
+/*-----------------------------------------*/
+
+.current-feature-card-block-list {
+  grid-auto-flow: column;
+  justify-content: left;
+  align-items: center;
+  display: grid;
+  gap: 2.5rem;
+}
+
+.current-feature-card-block {
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  gap: 0.25rem;
+}
+
+.current-feature-card-block-title {
+  font-family: "Josefin Sans", sans-serif;
+  text-shadow: 2px 2px 1px #00000050;
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: #fff;
+}
+
+/*-------------------------------------*/
+/*----------- BLOCK DETAILS -----------*/
+/*-------------------------------------*/
+
+.current-feature-card-block-details {
+  grid-auto-flow: column;
+  justify-content: left;
+  align-items: center;
+  display: grid;
+  gap: 0.4rem;
+}
+
+.current-feature-card-block-image {
+  filter: drop-shadow(3px 3px 1.25px #00000060);
+  width: 25px;
+}
+
+.current-feature-card-block-value {
+  font-family: "Josefin Sans", sans-serif;
+  text-shadow: 2px 2px 1px #00000050;
+  font-weight: 200;
+  font-size: 2rem;
+  color: #fff;
+}
+
+/*--------------------------------------------*/
+/*--------------- POINT STYLES ---------------*/
+/*--------------------------------------------*/
+
+.current-feature-points-list {
+  justify-content: space-between;
+  grid-auto-flow: column;
+  align-content: center;
+  display: grid;
+}
+
+.current-feature-point {
+  box-shadow: 0 0 10px #000000af;
+  border: 2px solid #ffffff10;
+  grid-template-columns: auto;
+  justify-content: center;
+  align-content: center;
+  border-radius: 10px;
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.current-feature-point-title {
+  font-family: "Josefin Sans", sans-serif;
+  text-shadow: 2px 2px 1px #00000050;
+  font-weight: 200;
+  font-size: 2rem;
+  color: #fff;
+}
+
+.current-feature-point-details {
+  grid-auto-flow: column;
+  justify-content: left;
+  align-content: center;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.current-feature-point-image {
+  filter: drop-shadow(3px 3px 1.25px #00000060);
+  width: 25px;
+}
+
+.current-feature-point-value {
+  font-family: "Josefin Sans", sans-serif;
+  text-shadow: 2px 2px 1px #00000050;
+  font-size: 1.65rem;
+  font-weight: 200;
+  color: #fff;
+}
+
+/*--------------------------------------------*/
+/*---------------- END OF CSS ----------------*/
+/*--------------------------------------------*/

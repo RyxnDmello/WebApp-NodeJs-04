@@ -1,0 +1,26 @@
+@import url("./current/current-form.css");
+
+@import url("./current/current-header.css");
+@import url("./current/current-features.css");
+
+#current {
+  box-shadow: 0 5px 10px #00000080, 0 -5px 10px #00000080;
+  grid-template-columns: repeat(2, auto);
+  background-color: #00000090;
+  justify-content: stretch;
+  padding: 2.5rem 4rem;
+  align-items: start;
+  position: relative;
+  margin-top: 4rem;
+  overflow: hidden;
+  gap: 2rem 0rem;
+  display: grid;
+}
+
+.current-background {
+  position: absolute;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+}

@@ -9,7 +9,7 @@
   border-radius: 2.5px;
   align-items: center;
   position: relative;
-  overflow: hidden;
+  cursor: default;
   display: grid;
   width: 350px;
   gap: 2rem;
@@ -102,7 +102,7 @@
 /*--------------- TRANSITIONS ---------------*/
 /*-------------------------------------------*/
 
-.current-input:hover::placeholder {
+.current-input:is(:hover, :focus)::placeholder {
   opacity: 0;
 }
 

@@ -34,8 +34,8 @@
 
 .weather-station {
   transition: height 650ms, background-color 650ms;
-  box-shadow: 4px 4px 10px #00000060;
-  background-color: #000000af;
+  box-shadow: 0 0 10px #000000bf;
+  background-color: #000000bf;
   grid-template-columns: auto;
   justify-content: stretch;
   align-items: stretch;

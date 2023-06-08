@@ -33,7 +33,6 @@
 
 .current-header-image {
   filter: drop-shadow(3px 3px 1.5px #00000060);
-  opacity: 0.25;
   width: 40px;
 }
 

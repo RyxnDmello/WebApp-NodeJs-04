@@ -4,7 +4,7 @@
 
 header {
   grid-template-columns: repeat(2, auto);
-  box-shadow: 0 5px 10px #00000080;
+  box-shadow: 0 5px 10px #000000af;
   background-color: #000000a0;
   padding: 2rem 6rem 4rem 6rem;
   justify-content: stretch;
@@ -25,10 +25,12 @@ header {
 }
 
 .header-background-1 {
+  object-position: 0 -14rem;
   z-index: -1;
 }
 
 .header-background-2 {
+  object-position: 0 -2rem;
   z-index: -2;
 }
 

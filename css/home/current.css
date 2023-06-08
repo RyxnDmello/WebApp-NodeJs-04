@@ -4,7 +4,7 @@
 @import url("./current/current-features.css");
 
 #current {
-  box-shadow: 0 5px 10px #00000080, 0 -5px 10px #00000080;
+  box-shadow: 0 5px 10px #000000af, 0 -5px 10px #000000af;
   grid-template-columns: repeat(2, auto);
   background-color: #00000090;
   justify-content: stretch;

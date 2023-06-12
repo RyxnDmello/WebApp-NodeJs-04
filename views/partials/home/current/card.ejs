@@ -1,0 +1,28 @@
+<div class="current-feature-card">
+  <h2 class="current-feature-card-title"><%= card.main.title %></h2>
+
+  <div class="current-feature-card-details">
+    <h4 class="current-feature-card-value <%= card.main.class %>">
+      <%= card.main.value %>
+    </h4>
+
+    <div class="current-feature-card-block-list">
+      <% card.details.forEach((detail) => { %>
+      <article class="current-feature-card-block">
+        <h4 class="current-feature-card-block-title"><%= detail.title %></h4>
+
+        <div class="current-feature-card-block-details">
+          <img
+            class="current-feature-card-block-image"
+            src="<%= detail.image %>"
+          />
+
+          <h4 class="current-feature-card-block-value <%= detail.class %>">
+            <%= detail.value %>
+          </h4>
+        </div>
+      </article>
+      <% }) %>
+    </div>
+  </div>
+</div>

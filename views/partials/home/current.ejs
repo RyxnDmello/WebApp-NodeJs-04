@@ -42,126 +42,17 @@
 
 <article class="current-station">
   <article class="current-header">
-    <div class="current-header-container">
-      <img class="current-header-image" src="/home/weather/pin.png" />
-      <h4 class="current-header-text">Panjim</h4>
-    </div>
-
-    <div class="current-header-container">
-      <img class="current-header-image" src="/home/current/date.png" />
-      <h4 class="current-header-text">8th June, 2023</h4>
-    </div>
+    <%- include("./current/header.ejs", { header: current.header }) %>
   </article>
 
   <article class="current-features-list">
-    <div class="current-feature-card">
-      <h2 class="current-feature-card-title">Temperature</h2>
-
-      <div class="current-feature-card-details">
-        <h4 class="current-feature-card-value">32°C</h4>
-
-        <div class="current-feature-card-block-list">
-          <article class="current-feature-card-block">
-            <h4 class="current-feature-card-block-title">Minimum</h4>
-
-            <div class="current-feature-card-block-details">
-              <img
-                class="current-feature-card-block-image"
-                src="/home/weather/ltemp.png"
-              />
-              <h4 class="current-feature-card-block-value">30</h4>
-            </div>
-          </article>
-
-          <div class="current-feature-card-block">
-            <h4 class="current-feature-card-block-title">Maximum</h4>
-
-            <div class="current-feature-card-block-details">
-              <img
-                class="current-feature-card-block-image"
-                src="/home/weather/htemp.png"
-              />
-              <h4 class="current-feature-card-block-value">34</h4>
-            </div>
-          </div>
-
-          <div class="current-feature-card-block">
-            <h4 class="current-feature-card-block-title">Feels Like</h4>
-
-            <div class="current-feature-card-block-details">
-              <img
-                class="current-feature-card-block-image"
-                src="/home/weather/ftemp.png"
-              />
-              <h4 class="current-feature-card-block-value">32</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <%- include("./current/card.ejs", { card: current.cards[0] }) %>
 
     <div class="current-feature-points-list">
-      <% for(let i = 0; i < 4; i++) { %>
-      <article class="current-feature-point">
-        <h3 class="current-feature-point-title">Humidity</h3>
-
-        <div class="current-feature-point-details">
-          <img
-            class="current-feature-point-image"
-            src="/home/weather/humidity.png"
-          />
-
-          <div class="current-feature-point-value">80%</div>
-        </div>
-      </article>
-      <% } %>
+      <%- include("./current/point.ejs", { points: current.points }) %>
     </div>
 
-    <div class="current-feature-card">
-      <h2 class="current-feature-card-title">Temperature</h2>
-
-      <div class="current-feature-card-details">
-        <h4 class="current-feature-card-value">32°C</h4>
-
-        <div class="current-feature-card-block-list">
-          <article class="current-feature-card-block">
-            <h4 class="current-feature-card-block-title">Minimum</h4>
-
-            <div class="current-feature-card-block-details">
-              <img
-                class="current-feature-card-block-image"
-                src="/home/weather/ltemp.png"
-              />
-              <h4 class="current-feature-card-block-value">30</h4>
-            </div>
-          </article>
-
-          <div class="current-feature-card-block">
-            <h4 class="current-feature-card-block-title">Maximum</h4>
-
-            <div class="current-feature-card-block-details">
-              <img
-                class="current-feature-card-block-image"
-                src="/home/weather/htemp.png"
-              />
-              <h4 class="current-feature-card-block-value">34</h4>
-            </div>
-          </div>
-
-          <div class="current-feature-card-block">
-            <h4 class="current-feature-card-block-title">Feels Like</h4>
-
-            <div class="current-feature-card-block-details">
-              <img
-                class="current-feature-card-block-image"
-                src="/home/weather/ftemp.png"
-              />
-              <h4 class="current-feature-card-block-value">32</h4>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <%- include("./current/card.ejs", { card: current.cards[1] }) %>
   </article>
 </article>
 

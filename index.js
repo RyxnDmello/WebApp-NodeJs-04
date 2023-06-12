@@ -3,7 +3,7 @@ require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 
-const CurrentWeather = require("./database/CurrentWeather.js");
+const WeatherManager = require("./database/WeatherManager.js");
 
 const app = express();
 
@@ -18,7 +18,7 @@ app.use(express.static("./css"));
 app.set("view engine", "ejs");
 
 app.get("/", (req, res) => {
-  CurrentWeather.CurrentWeather(res);
+  WeatherManager.DisplayCurrentWeather(res);
 });
 
 app.listen(process.env.PORT, () => {

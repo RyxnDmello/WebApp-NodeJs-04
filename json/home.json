@@ -3,11 +3,13 @@
     "header": [
       {
         "value": "",
-        "image": "/home/weather/pin.png"
+        "image": "/home/weather/pin.png",
+        "class": "current-location"
       },
       {
         "value": "",
-        "image": "/home/current/date.png"
+        "image": "/home/current/date.png",
+        "class": "current-date"
       }
     ],
     "cards": [
@@ -46,10 +48,10 @@
         },
         "details": [
           {
-            "title": "Probability",
+            "title": "Chance",
             "value": "",
             "image": "/home/weather/ltemp.png",
-            "class": "current-precipitation-probability"
+            "class": "current-precip-chance"
           },
           {
             "title": "Cover",
@@ -58,7 +60,7 @@
             "class": "current-precipitation-cover"
           },
           {
-            "title": "Dew",
+            "title": "Snow",
             "value": "",
             "image": "/home/weather/ftemp.png",
             "class": "current-precipitation-dew"

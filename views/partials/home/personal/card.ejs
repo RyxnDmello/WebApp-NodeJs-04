@@ -1,0 +1,20 @@
+<div class="personal-card">
+  <h2 class="personal-card-title"><%= card.main.title %></h2>
+
+  <article class="personal-card-main">
+    <img class="personal-card-main-image" src="<%= card.main.image %>" />
+    <h4 class="personal-card-main-value"><%= card.main.value %></h4>
+  </article>
+
+  <hr class="personal-card-divider" />
+
+  <article class="personal-card-block-list">
+    <% card.details.forEach((detail) => { %>
+    <div class="personal-card-block">
+      <h4 class="personal-card-block-title"><%= detail.title %></h4>
+      <h4 class="personal-card-block-value"><%= detail.value %></h4>
+      <img class="personal-card-block-image" src="<%= detail.image %>" />
+    </div>
+    <% }) %>
+  </article>
+</div>

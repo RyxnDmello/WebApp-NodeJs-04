@@ -1,30 +1,8 @@
-/*------------------------------------------------*/
-/*---------------- WEATHER STYLES ----------------*/
-/*------------------------------------------------*/
+/*--------------------------------------------------*/
+/*----------------- STATION STYLES -----------------*/
+/*--------------------------------------------------*/
 
-#weather {
-  grid-template-columns: auto;
-  justify-content: stretch;
-  align-items: center;
-  cursor: default;
-  padding: 4rem;
-  display: grid;
-  gap: 2rem;
-}
-
-.weather-title {
-  font-family: "Queenside Regular", sans-serif;
-  text-shadow: 2.5px 2.5px 5px #00000060;
-  letter-spacing: 2px;
-  font-size: 4rem;
-  color: #000;
-}
-
-/*----------------------------------------------*/
-/*--------------- STATION STYLES ---------------*/
-/*----------------------------------------------*/
-
-.weather-station-list {
+.personal-station-list {
   grid-template-columns: auto;
   justify-content: stretch;
   align-items: center;
@@ -32,7 +10,7 @@
   gap: 2rem 0;
 }
 
-.weather-station {
+.personal-station {
   transition: height 650ms, background-color 650ms;
   box-shadow: 0 0 10px #000000bf;
   background-color: #000000bf;
@@ -43,12 +21,12 @@
   border-radius: 5px;
   overflow: hidden;
   padding: 2rem;
+  height: 165px;
   display: grid;
-  height: 180px;
   gap: 5rem 0;
 }
 
-.weather-background {
+.personal-background {
   position: absolute;
   object-fit: cover;
   height: 100%;
@@ -56,12 +34,12 @@
   z-index: -1;
 }
 
-/*--------------------------------------*/
-/*----------- WEATHER BUTTON -----------*/
-/*--------------------------------------*/
+/*---------------------------------------*/
+/*----------- PERSONAL BUTTON -----------*/
+/*---------------------------------------*/
 
-.weather-expand-button,
-.weather-collapse-button {
+.personal-expand-button,
+.personal-collapse-button {
   transition: scale 250ms, opacity 250ms;
   filter: drop-shadow(2.5px 2.5px 0);
   position: absolute;
@@ -69,14 +47,14 @@
   width: 40px;
 }
 
-.weather-expand-button {
+.personal-expand-button {
   margin: 0 auto;
   bottom: 1rem;
   right: 0;
   left: 0;
 }
 
-.weather-collapse-button {
+.personal-collapse-button {
   pointer-events: none;
   bottom: 2rem;
   right: 1rem;
@@ -87,7 +65,7 @@
 /*------------- HEADER STYLES -------------*/
 /*-----------------------------------------*/
 
-.weather-header {
+.personal-header {
   justify-content: space-between;
   grid-auto-flow: column;
   align-items: center;
@@ -98,7 +76,7 @@
 /*------------ LOCATION STYLES ------------*/
 /*-----------------------------------------*/
 
-.weather-location-block {
+.personal-location-block {
   justify-content: center;
   grid-auto-flow: column;
   align-items: center;
@@ -106,12 +84,12 @@
   gap: 0.5rem;
 }
 
-.weather-location-image {
+.personal-location-image {
   filter: drop-shadow(2.5px 2.5px 0 #00000060);
   width: 50px;
 }
 
-.weather-location-name {
+.personal-location-name {
   text-shadow: 2.5px 2.5px 0 #00000060;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 200;
@@ -123,7 +101,7 @@
 /*------------- DETAILS STYLES -------------*/
 /*------------------------------------------*/
 
-.weather-details-block-list {
+.personal-details-block-list {
   justify-content: center;
   grid-auto-flow: column;
   align-items: center;
@@ -131,7 +109,7 @@
   gap: 0 2rem;
 }
 
-.weather-details-block {
+.personal-details-block {
   justify-content: center;
   grid-auto-flow: column;
   align-items: center;
@@ -139,12 +117,12 @@
   gap: 1.25rem;
 }
 
-.weather-details-image {
+.personal-details-image {
   filter: drop-shadow(2.5px 2.5px 0 #00000060);
   width: 80px;
 }
 
-.weather-details-container {
+.personal-details-container {
   grid-template-columns: auto;
   justify-content: center;
   align-items: center;
@@ -152,7 +130,7 @@
   gap: 0.25rem;
 }
 
-.weather-details-type {
+.personal-details-type {
   text-shadow: 2.5px 2.5px 0 #00000050;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 300;
@@ -160,7 +138,7 @@
   color: #fff;
 }
 
-.weather-details-description {
+.personal-details-description {
   text-shadow: 1.5px 1.5px 0 #00000050;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.25rem;
@@ -172,8 +150,8 @@
 /*-------------- TRANSITION --------------*/
 /*----------------------------------------*/
 
-.weather-expand-button:hover,
-.weather-collapse-button:hover {
+.personal-expand-button:hover,
+.personal-collapse-button:hover {
   scale: 1.1;
 }
 

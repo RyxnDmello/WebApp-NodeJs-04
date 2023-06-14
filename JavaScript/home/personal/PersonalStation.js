@@ -1,15 +1,15 @@
-const containers = document.querySelectorAll(".weather-station");
-const expandButtons = document.querySelectorAll(".weather-expand-button");
-const collapseButtons = document.querySelectorAll(".weather-collapse-button");
+const containers = document.querySelectorAll(".personal-station");
+const expandButtons = document.querySelectorAll(".personal-expand-button");
+const collapseButtons = document.querySelectorAll(".personal-collapse-button");
 
 const stationExpandedHeight = 520;
-const stationCollapsedHeight = 180;
+const stationCollapsedHeight = 165;
 
-export default function WeatherStation() {
-  WeatherController();
+export default function PersonalStation() {
+  StationController();
 }
 
-function WeatherController() {
+function StationController() {
   expandButtons.forEach((button, index) =>
     button.addEventListener("click", () => Expand(index))
   );

@@ -1,0 +1,10 @@
+<% points.forEach((point) => { %>
+<article class="personal-point">
+  <h2 class="personal-point-title"><%= point.title %></h2>
+
+  <article class="personal-point-container">
+    <img class="personal-point-image" src="<%= point.image %>" />
+    <h3 class="personal-point-value"><%= point.value %></h3>
+  </article>
+</article>
+<% }) %>

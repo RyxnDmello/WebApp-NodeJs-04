@@ -27,10 +27,12 @@
     <header id="header"><%- include("./partials/home/header.ejs") %></header>
 
     <main>
-      <section id="current"></section>
+      <section id="current">
+        <%- include("./partials/home/current.ejs", { current: current }) %>
+      </section>
 
-      <section id="weather">
-        <%- include("./partials/home/weather.ejs") %>
+      <section id="personal">
+        <%- include("./partials/home/personal.ejs", { personals: personals }) %>
       </section>
     </main>
 

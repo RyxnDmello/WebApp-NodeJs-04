@@ -1,0 +1,26 @@
+<h2 class="personal-title">YOUR PERSONAL STATIONS</h2>
+
+<article class="personal-station-list">
+  <% personals.forEach((personal) => { %>
+  <div class="personal-station">
+    <img class="personal-background" src="/home/weather/test-1.jpg" />
+
+    <article class="personal-header">
+      <%- include("./personal/header.ejs") %>
+    </article>
+
+    <article class="personal-features">
+      <%- include("./personal/card.ejs", { card: personal.cards[0] }) %>
+
+      <div class="personal-points-list">
+        <%- include("./personal/point.ejs", { points: personal.points }) %>
+      </div>
+
+      <%- include("./personal/card.ejs", { card: personal.cards[1] }) %>
+    </article>
+
+    <img class="personal-expand-button" src="/buttons/round-down.png" />
+    <img class="personal-collapse-button" src="/buttons/round-up.png" />
+  </div>
+  <% }) %>
+</article>

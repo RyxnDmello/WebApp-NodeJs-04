@@ -3,8 +3,7 @@
 @import url("./home/navbar.css");
 @import url("./home/header-information.css");
 @import url("./home/header-features.css");
-@import url("./home/weather-features.css");
-@import url("./home/weather-header.css");
+@import url("./home/personal.css");
 @import url("./home/current.css");
 
 * {

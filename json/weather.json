@@ -1,0 +1,84 @@
+{
+  "header": [
+    {
+      "image": "/home/weather/location.png",
+      "class": "current-location"
+    },
+    {
+      "image": "/home/current/date.png",
+      "class": "current-date"
+    }
+  ],
+  "cards": [
+    {
+      "main": {
+        "title": "Temperature",
+        "image": "/home/weather/temp.png",
+        "class": "current-temp"
+      },
+      "details": [
+        {
+          "title": "Feels Like",
+          "image": "/home/weather/temp-feels.png",
+          "class": "current-temp-feels"
+        },
+        {
+          "title": "Maximum",
+          "image": "/home/weather/temp-maximum.png",
+          "class": "current-temp-max"
+        },
+        {
+          "title": "Minimum",
+          "image": "/home/weather/temp-minimum.png",
+          "class": "current-temp-min"
+        }
+      ]
+    },
+    {
+      "main": {
+        "title": "Precipitation",
+        "image": "/home/weather/precip.png",
+        "class": "current-precipitation"
+      },
+      "details": [
+        {
+          "title": "Chance",
+          "image": "/home/weather/precip-prob.png",
+          "class": "current-precip-chance"
+        },
+        {
+          "title": "Rain Cover",
+          "image": "/home/weather/precip-cover.png",
+          "class": "current-precipitation-cover"
+        },
+        {
+          "title": "Snow",
+          "image": "/home/weather/precip-snow.png",
+          "class": "current-precipitation-dew"
+        }
+      ]
+    }
+  ],
+  "points": [
+    {
+      "title": "Humidity",
+      "image": "/home/weather/humidity.png",
+      "class": "current-humidity"
+    },
+    {
+      "title": "Pressure",
+      "image": "/home/weather/pressure.png",
+      "class": "current-pressure"
+    },
+    {
+      "title": "Winds",
+      "image": "/home/weather/winds.png",
+      "class": "current-winds"
+    },
+    {
+      "title": "Clouds",
+      "image": "/home/weather/clouds.png",
+      "class": "current-clouds"
+    }
+  ]
+}

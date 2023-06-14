@@ -3,7 +3,7 @@
     "header": [
       {
         "value": "",
-        "image": "/home/weather/pin.png",
+        "image": "/home/weather/location.png",
         "class": "current-location"
       },
       {
@@ -21,22 +21,22 @@
         },
         "details": [
           {
-            "title": "Minimum",
+            "title": "Feels Like",
             "value": "",
-            "image": "/home/weather/ltemp.png",
-            "class": "current-temp-min"
+            "image": "/home/weather/temp-feels.png",
+            "class": "current-temp-feels"
           },
           {
             "title": "Maximum",
             "value": "",
-            "image": "/home/weather/htemp.png",
+            "image": "/home/weather/temp-maximum.png",
             "class": "current-temp-max"
           },
           {
-            "title": "Feels Like",
+            "title": "Minimum",
             "value": "",
-            "image": "/home/weather/ftemp.png",
-            "class": "current-temp-feels"
+            "image": "/home/weather/temp-minimum.png",
+            "class": "current-temp-min"
           }
         ]
       },
@@ -50,19 +50,19 @@
           {
             "title": "Chance",
             "value": "",
-            "image": "/home/weather/ltemp.png",
+            "image": "/home/weather/precip-prob.png",
             "class": "current-precip-chance"
           },
           {
             "title": "Cover",
             "value": "",
-            "image": "/home/weather/htemp.png",
+            "image": "/home/weather/precip-cover.png",
             "class": "current-precipitation-cover"
           },
           {
             "title": "Snow",
             "value": "",
-            "image": "/home/weather/ftemp.png",
+            "image": "/home/weather/precip-snow.png",
             "class": "current-precipitation-dew"
           }
         ]
@@ -84,7 +84,7 @@
       {
         "title": "Winds",
         "value": "",
-        "image": "/home/weather/wind.png",
+        "image": "/home/weather/winds.png",
         "class": "current-winds"
       },
       {

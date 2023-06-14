@@ -1,14 +1,15 @@
+require("dotenv").config();
 const { DateTime } = require("luxon");
 
 const Home = require("../../json/home.json");
 
-module.exports.CurrentWeather = async (API, response) => {
-  const weather = await GetWeatherData(API);
+module.exports.CreateCurrentStation = async () => {
+  const weather = await GetWeatherData();
   if (weather !== null) SetWeatherData(weather);
-  response.render("home", { current: Home.current });
 };
 
-const GetWeatherData = async (API) => {
+const GetWeatherData = async () => {
+  const API = `${process.env.WEATHER_API_URL}/panjim?${process.env.WEATHER_API_PARAMS}&key=${process.env.WEATHER_API_KEY}`;
   const response = await fetch(API);
   const weather = await response.json();
   return weather;
@@ -21,9 +22,9 @@ const SetWeatherData = (weather) => {
   ).toFormat("MMMM dd, yyyy");
 
   Home.current.cards[0].main.value = `${weather.days[0].temp}°C`;
-  Home.current.cards[0].details[0].value = `${weather.days[0].tempmin}°C`;
+  Home.current.cards[0].details[0].value = `${weather.days[0].feelslike}°C`;
   Home.current.cards[0].details[1].value = `${weather.days[0].tempmax}°C`;
-  Home.current.cards[0].details[2].value = `${weather.days[0].feelslike}°C`;
+  Home.current.cards[0].details[2].value = `${weather.days[0].tempmin}°C`;
 
   Home.current.cards[1].main.value = `${weather.days[0].precip}mm`;
   Home.current.cards[1].details[0].value = `${weather.days[0].precipprob}%`;

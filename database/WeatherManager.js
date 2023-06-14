@@ -1,11 +1,10 @@
-require("dotenv").config();
+const { CreateCurrentStation } = require("./weather/CurrentStation.js");
+const { CreatePersonalStations } = require("./weather/PersonalStations.js");
 
-const { CurrentWeather } = require("./weather/CurrentWeather.js");
+module.exports.CurrentStation = (response) => {
+  CreateCurrentStation(response);
+};
 
-const URL = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline`;
-const PARAMS = `unitGroup=metric&contentType=json&key=${process.env.WEATHER_API_KEY}`;
-
-module.exports.DisplayCurrentWeather = (response) => {
-  const API = `${URL}/panjim?${PARAMS}`;
-  CurrentWeather(API, response);
+module.exports.PersonalStations = async (stations, response) => {
+  return await CreatePersonalStations(stations, response);
 };

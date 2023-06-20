@@ -1,0 +1,106 @@
+/*-----------------------------------------------*/
+/*--------------- CAROUSEL STYLES ---------------*/
+/*-----------------------------------------------*/
+
+.current-station-carousel {
+  grid-auto-flow: column;
+  justify-content: start;
+  align-items: center;
+  overflow: hidden;
+  display: grid;
+  padding: 2rem;
+  width: 914px;
+  gap: 0 2rem;
+}
+
+.current-station-slide {
+  grid-template-columns: auto;
+  justify-content: stretch;
+  align-items: center;
+  cursor: default;
+  display: grid;
+  width: 850px;
+  gap: 2rem 0;
+}
+
+/*-----------------------------------------------*/
+/*-------------- CONTROLLER STYLES --------------*/
+/*-----------------------------------------------*/
+
+.current-station-controller {
+  justify-content: center;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+  gap: 0 1rem;
+}
+
+.current-station-controller-button {
+  transition: transform 350ms, opacity 350ms, border-color 350ms;
+  font-family: "Josefin Sans", sans-serif;
+  box-shadow: 0 2.5px 5px #000000a0;
+  padding: 0.5rem 1rem 0.25rem 1rem;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 5px;
+  border: 2px solid transparent;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 5px;
+  font-size: 1.5rem;
+  font-weight: 200;
+  cursor: pointer;
+  color: #fff;
+  opacity: 0.25;
+}
+
+.current-station-controller-button:nth-of-type(1) {
+  border-color: #fff;
+  opacity: 1;
+}
+
+/*-------------------------------------*/
+/*------------ TRANSITIONS ------------*/
+/*-------------------------------------*/
+
+.current-station-controller-button:hover {
+  transform: translateY(-5px);
+}
+
+/*--------------------------------------*/
+/*------------- ANIMATIONS -------------*/
+/*--------------------------------------*/
+
+.current-slide-fade-out {
+  animation: CurrentSlideFadeOut 500ms forwards;
+}
+
+.current-slide-fade-in {
+  animation: CurrentSlideFadeIn 500ms forwards;
+}
+
+@keyframes CurrentSlideFadeOut {
+  0% {
+    translate: 0 0;
+    opacity: 1;
+  }
+
+  100% {
+    translate: 0 -20px;
+    opacity: 0;
+  }
+}
+
+@keyframes CurrentSlideFadeIn {
+  0% {
+    translate: 0 20px;
+    opacity: 0;
+  }
+
+  100% {
+    translate: 0 0;
+    opacity: 1;
+  }
+}
+
+/*----------------------------------------*/
+/*-------------- END OF CSS --------------*/
+/*----------------------------------------*/

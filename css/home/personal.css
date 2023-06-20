@@ -3,11 +3,11 @@
 
 #personal {
   grid-template-columns: auto;
-  justify-content: stretch;
+  justify-content: center;
   align-items: center;
   cursor: default;
-  padding: 4rem;
   display: grid;
+  padding: 4rem;
   gap: 2rem;
 }
 

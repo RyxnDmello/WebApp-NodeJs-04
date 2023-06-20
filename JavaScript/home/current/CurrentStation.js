@@ -3,23 +3,23 @@ const latitude = document.querySelector(".current-latitude");
 const longitude = document.querySelector(".current-longitude");
 const button = document.querySelector(".current-button");
 
-const location = document.querySelector(".current-location");
-const coordinates = document.querySelector(".current-coordinates");
+const location = document.querySelectorAll(".current-location");
+const coordinates = document.querySelectorAll(".current-coordinates");
 
-const temperature = document.querySelector(".current-temp");
-const minimumTemperature = document.querySelector(".current-temp-min");
-const maximumTemperature = document.querySelector(".current-temp-max");
-const feelsTemperature = document.querySelector(".current-temp-feels");
+const temperature = document.querySelectorAll(".current-temp");
+const minimumTemperature = document.querySelectorAll(".current-temp-min");
+const maximumTemperature = document.querySelectorAll(".current-temp-max");
+const feelsTemperature = document.querySelectorAll(".current-temp-feels");
 
-const precipitation = document.querySelector(".current-precip");
-const precipitationProb = document.querySelector(".current-precip-chance");
-const precipitationCover = document.querySelector(".current-precip-cover");
-const precipitationSnow = document.querySelector(".current-precip-snow");
+const precipitation = document.querySelectorAll(".current-precip");
+const precipitationProb = document.querySelectorAll(".current-precip-chance");
+const precipitationCover = document.querySelectorAll(".current-precip-cover");
+const precipitationSnow = document.querySelectorAll(".current-precip-snow");
 
-const humidity = document.querySelector(".current-humidity");
-const pressure = document.querySelector(".current-pressure");
-const winds = document.querySelector(".current-winds");
-const clouds = document.querySelector(".current-clouds");
+const humidity = document.querySelectorAll(".current-humidity");
+const pressure = document.querySelectorAll(".current-pressure");
+const winds = document.querySelectorAll(".current-winds");
+const clouds = document.querySelectorAll(".current-clouds");
 
 const URL = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline`;
 const PARAMS =
@@ -42,21 +42,23 @@ async function GetWeatherData() {
 }
 
 function SetWeatherData(weather) {
-  location.textContent = weather.resolvedAddress;
-  coordinates.textContent = `${weather.latitude} : ${weather.longitude}`;
+  for (let i = 0; i < 7; i++) {
+    location[i].textContent = weather.resolvedAddress;
+    coordinates[i].textContent = `${weather.latitude} : ${weather.longitude}`;
 
-  temperature.textContent = `${weather.days[0].temp}°C`;
-  minimumTemperature.textContent = `${weather.days[0].tempmin}°C`;
-  maximumTemperature.textContent = `${weather.days[0].tempmax}°C`;
-  feelsTemperature.textContent = `${weather.days[0].feelslike}°C`;
+    temperature[i].textContent = `${weather.days[i].temp}°C`;
+    minimumTemperature[i].textContent = `${weather.days[i].tempmin}°C`;
+    maximumTemperature[i].textContent = `${weather.days[i].tempmax}°C`;
+    feelsTemperature[i].textContent = `${weather.days[i].feelslike}°C`;
+    precipitation[i].textContent = `${weather.days[i].precip}mm`;
 
-  precipitation.textContent = `${weather.days[0].precip}mm`;
-  precipitationProb.textContent = `${weather.days[0].precipprob}%`;
-  precipitationCover.textContent = `${weather.days[0].precipcover}%`;
-  precipitationSnow.textContent = `${weather.days[0].snow}cm`;
+    precipitationProb[i].textContent = `${weather.days[i].precipprob}%`;
+    precipitationCover[i].textContent = `${weather.days[i].precipcover}%`;
+    precipitationSnow[i].textContent = `${weather.days[i].snow}cm`;
 
-  humidity.textContent = `${weather.days[0].humidity}%`;
-  pressure.textContent = `${weather.days[0].pressure}hpa`;
-  winds.textContent = `${weather.days[0].windspeed}kmh`;
-  clouds.textContent = `${weather.days[0].cloudcover}%`;
+    humidity[i].textContent = `${weather.days[i].humidity}%`;
+    pressure[i].textContent = `${weather.days[i].pressure}hpa`;
+    winds[i].textContent = `${weather.days[i].windspeed}kmh`;
+    clouds[i].textContent = `${weather.days[i].cloudcover}%`;
+  }
 }

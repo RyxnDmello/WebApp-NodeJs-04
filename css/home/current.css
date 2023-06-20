@@ -1,5 +1,6 @@
 @import url("./current/current-form.css");
 
+@import url("./current/current-carousel.css");
 @import url("./current/current-header.css");
 @import url("./current/current-features.css");
 
@@ -8,12 +9,13 @@
   grid-template-columns: repeat(2, auto);
   justify-content: space-between;
   background-color: #00000090;
-  padding: 2.5rem 4rem;
+  padding: 1rem 4rem;
   align-items: start;
   position: relative;
   margin-top: 4rem;
   overflow: hidden;
   display: grid;
+  height: 100vh;
 }
 
 .current-background {

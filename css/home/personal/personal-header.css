@@ -4,7 +4,7 @@
 
 .personal-station-list {
   grid-template-columns: auto;
-  justify-content: stretch;
+  justify-content: center;
   align-items: center;
   display: grid;
   gap: 2rem 0;
@@ -15,15 +15,14 @@
   box-shadow: 0 0 10px #000000bf;
   background-color: #000000bf;
   grid-template-columns: auto;
-  justify-content: stretch;
+  justify-content: center;
   align-items: stretch;
   position: relative;
   border-radius: 5px;
   overflow: hidden;
   padding: 2rem;
-  height: 165px;
   display: grid;
-  gap: 5rem 0;
+  gap: 2rem 0;
 }
 
 .personal-background {

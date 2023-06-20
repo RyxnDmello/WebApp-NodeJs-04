@@ -6,35 +6,8 @@
   grid-template-columns: auto;
   justify-content: center;
   align-items: center;
-  width: fit-content;
   cursor: default;
   display: grid;
-}
-
-.current-station-carousel {
-  padding: 2rem 2rem 1rem 2rem;
-  grid-auto-flow: column;
-  justify-content: start;
-  align-items: center;
-  overflow: hidden;
-  display: grid;
-  width: 914px;
-  gap: 0 2rem;
-}
-
-.current-station-slide {
-  transition: transform 450ms;
-  grid-template-columns: auto;
-  justify-content: stretch;
-  align-items: center;
-  cursor: default;
-  display: grid;
-  width: 850px;
-  gap: 2rem 0;
-}
-
-.current-station-controller-button {
-  font-size: 2rem;
 }
 
 /*---------------------------------------*/
@@ -57,12 +30,12 @@
 }
 
 .current-header-image {
-  filter: drop-shadow(3px 3px 1.5px #00000060);
+  filter: drop-shadow(0 3px 1.5px #000000af);
   width: 40px;
 }
 
 .current-header-text {
-  text-shadow: 2.5px 2.5px 2.5px #00000080;
+  text-shadow: 0 2.5px 2.5px #000;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 200;
   font-size: 2rem;
@@ -82,12 +55,12 @@
 }
 
 .current-header-details-image {
-  filter: drop-shadow(3px 3px 1.5px #00000060);
+  filter: drop-shadow(0 3px 1.5px #000000af);
   width: 40px;
 }
 
 .current-header-details-title {
-  text-shadow: 2.5px 2.5px 2.5px #00000080;
+  text-shadow: 0 2.5px 2.5px #000;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.65rem;
   font-weight: 200;
@@ -95,7 +68,7 @@
 }
 
 .current-header-details-text {
-  text-shadow: 2.5px 2.5px 2.5px #00000080;
+  text-shadow: 0 2.5px 2.5px #000;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.25rem;
   font-weight: 200;

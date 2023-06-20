@@ -45,7 +45,7 @@
 
 <article class="current-station">
   <article class="current-station-carousel">
-    <% current.forEach((day) => { %>
+    <% current.forEach((day, index) => { %>
     <div class="current-station-slide">
       <div class="current-header">
         <%- include("./current/header.ejs", { header: day.header }) %>
@@ -65,8 +65,8 @@
   </article>
 
   <article class="current-station-controller">
-    <% current.forEach((day, index) => { %>
-    <h1 class="current-station-controller-button"><%= index + 1 %></h1>
+    <% current.forEach((day) => { %>
+    <h1 class="current-station-controller-button"><%= day.day %></h1>
     <% }) %>
   </article>
 </article>

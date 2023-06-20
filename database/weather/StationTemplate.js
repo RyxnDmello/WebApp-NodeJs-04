@@ -16,6 +16,7 @@ module.exports.WeatherData = (weather) => {
 
 const StationTemplate = (weather, day) => {
   return {
+    day: GetDate(weather.days[day].datetime),
     header: [
       {
         value: weather.resolvedAddress,
@@ -116,5 +117,5 @@ const StationTemplate = (weather, day) => {
 }
 
 const GetDate = (date) => {
-  return DateTime.fromISO(date).toFormat("MMMM dd, yyyy");
+  return DateTime.fromISO(date).toFormat("dd MMMM").toString();
 };

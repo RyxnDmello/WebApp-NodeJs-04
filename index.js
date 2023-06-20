@@ -22,12 +22,16 @@ app.get("/", async (req, res) => {
       latitude: 15.4584,
       longitude: 73.8057,
     },
+    {
+      latitude: 15.4584,
+      longitude: 73.8057,
+    },
   ];
 
   const CurrentStation = await WeatherManager.CurrentStation(stations, res);
-  // const PersonalStations = await WeatherManager.PersonalStations(stations, res);
+  const PersonalStations = await WeatherManager.PersonalStations(stations, res);
 
-  res.render("home", { current: CurrentStation });
+  res.render("home", { current: CurrentStation, personal: PersonalStations });
 });
 
 app.listen(process.env.DEVELOPMENT_PORT, () => {

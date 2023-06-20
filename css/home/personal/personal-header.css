@@ -76,7 +76,7 @@
 /*------------ LOCATION STYLES ------------*/
 /*-----------------------------------------*/
 
-.personal-location-block {
+.personal-header-container {
   justify-content: center;
   grid-auto-flow: column;
   align-items: center;
@@ -84,16 +84,16 @@
   gap: 0.5rem;
 }
 
-.personal-location-image {
-  filter: drop-shadow(2.5px 2.5px 0 #00000060);
+.personal-header-image {
+  filter: drop-shadow(3px 3px 1.5px #00000060);
   width: 50px;
 }
 
-.personal-location-name {
-  text-shadow: 2.5px 2.5px 0 #00000060;
+.personal-header-text {
+  text-shadow: 2.5px 2.5px 2.5px #00000080;
   font-family: "Josefin Sans", sans-serif;
+  font-size: 2.25rem;
   font-weight: 200;
-  font-size: 3rem;
   color: #fff;
 }
 
@@ -101,28 +101,7 @@
 /*------------- DETAILS STYLES -------------*/
 /*------------------------------------------*/
 
-.personal-details-block-list {
-  justify-content: center;
-  grid-auto-flow: column;
-  align-items: center;
-  display: grid;
-  gap: 0 2rem;
-}
-
-.personal-details-block {
-  justify-content: center;
-  grid-auto-flow: column;
-  align-items: center;
-  display: grid;
-  gap: 1.25rem;
-}
-
-.personal-details-image {
-  filter: drop-shadow(2.5px 2.5px 0 #00000060);
-  width: 80px;
-}
-
-.personal-details-container {
+.personal-header-details {
   grid-template-columns: auto;
   justify-content: center;
   align-items: center;
@@ -130,20 +109,25 @@
   gap: 0.25rem;
 }
 
-.personal-details-type {
-  text-shadow: 2.5px 2.5px 0 #00000050;
+.personal-header-details-image {
+  filter: drop-shadow(3px 3px 1.5px #00000060);
+  width: 50px;
+}
+
+.personal-header-details-title {
+  text-shadow: 2.5px 2.5px 2.5px #00000080;
   font-family: "Josefin Sans", sans-serif;
-  font-weight: 300;
+  font-weight: 200;
   font-size: 2rem;
   color: #fff;
 }
 
-.personal-details-description {
-  text-shadow: 1.5px 1.5px 0 #00000050;
+.personal-header-details-text {
+  text-shadow: 2.5px 2.5px 2.5px #00000080;
   font-family: "Josefin Sans", sans-serif;
-  font-size: 1.25rem;
-  color: #bababa;
-  font-weight: 300;
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: #9d9d9d;
 }
 
 /*----------------------------------------*/

@@ -6,14 +6,13 @@
 #current {
   box-shadow: 0 5px 10px #000000af, 0 -5px 10px #000000af;
   grid-template-columns: repeat(2, auto);
+  justify-content: space-between;
   background-color: #00000090;
-  justify-content: stretch;
   padding: 2.5rem 4rem;
   align-items: start;
   position: relative;
   margin-top: 4rem;
   overflow: hidden;
-  gap: 2rem 0rem;
   display: grid;
 }
 

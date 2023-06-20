@@ -5,8 +5,8 @@
       "class": "current-location"
     },
     {
-      "image": "/home/current/date.png",
-      "class": "current-date"
+      "image": "/home/weather/location.png",
+      "class": "current-coordinates"
     }
   ],
   "cards": [
@@ -38,7 +38,7 @@
       "main": {
         "title": "Precipitation",
         "image": "/home/weather/precip.png",
-        "class": "current-precipitation"
+        "class": "current-precip"
       },
       "details": [
         {
@@ -49,12 +49,12 @@
         {
           "title": "Rain Cover",
           "image": "/home/weather/precip-cover.png",
-          "class": "current-precipitation-cover"
+          "class": "current-precip-cover"
         },
         {
           "title": "Snow",
           "image": "/home/weather/precip-snow.png",
-          "class": "current-precipitation-dew"
+          "class": "current-precip-snow"
         }
       ]
     }

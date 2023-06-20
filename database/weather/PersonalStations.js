@@ -1,5 +1,5 @@
 require("dotenv").config();
-const { StationTemplate } = require("./StationTemplate");
+const { WeatherData } = require("./StationTemplate");
 
 module.exports.CreatePersonalStations = async (stations) => {
   let personalStations = [];
@@ -10,7 +10,7 @@ module.exports.CreatePersonalStations = async (stations) => {
       stations[i].longitude
     );
 
-    if (weather !== null) personalStations.push(StationTemplate(weather));
+    if (weather !== null) personalStations.push(WeatherData(weather));
   }
 
   return personalStations;

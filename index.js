@@ -25,9 +25,9 @@ app.get("/", async (req, res) => {
   ];
 
   const CurrentStation = await WeatherManager.CurrentStation(stations, res);
-  const PersonalStations = await WeatherManager.PersonalStations(stations, res);
+  // const PersonalStations = await WeatherManager.PersonalStations(stations, res);
 
-  res.render("home", { current: CurrentStation, personals: PersonalStations });
+  res.render("home", { current: CurrentStation });
 });
 
 app.listen(process.env.DEVELOPMENT_PORT, () => {

@@ -44,18 +44,30 @@
 </article>
 
 <article class="current-station">
-  <article class="current-header">
-    <%- include("./current/header.ejs", { header: current.header }) %>
+  <article class="current-station-carousel">
+    <% current.forEach((day) => { %>
+    <div class="current-station-slide">
+      <div class="current-header">
+        <%- include("./current/header.ejs", { header: day.header }) %>
+      </div>
+
+      <div class="current-features-list">
+        <%- include("./current/card.ejs", { card: day.cards[0] }) %>
+
+        <div class="current-feature-points-list">
+          <%- include("./current/point.ejs", { points: day.points }) %>
+        </div>
+
+        <%- include("./current/card.ejs", { card: day.cards[1] }) %>
+      </div>
+    </div>
+    <% }) %>
   </article>
 
-  <article class="current-features-list">
-    <%- include("./current/card.ejs", { card: current.cards[0] }) %>
-
-    <div class="current-feature-points-list">
-      <%- include("./current/point.ejs", { points: current.points }) %>
-    </div>
-
-    <%- include("./current/card.ejs", { card: current.cards[1] }) %>
+  <article class="current-station-controller">
+    <% current.forEach((day, index) => { %>
+    <h1 class="current-station-controller-button"><%= index + 1 %></h1>
+    <% }) %>
   </article>
 </article>
 

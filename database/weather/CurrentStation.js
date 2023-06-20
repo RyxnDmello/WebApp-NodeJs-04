@@ -1,9 +1,9 @@
 require("dotenv").config();
-const { StationTemplate } = require("./StationTemplate.js");
+const { WeatherData } = require("./StationTemplate.js");
 
 module.exports.CreateCurrentStation = async () => {
   const weather = await GetWeatherData();
-  if (weather !== null) return StationTemplate(weather);
+  if (weather !== null) return WeatherData(weather);
 };
 
 const GetWeatherData = async () => {

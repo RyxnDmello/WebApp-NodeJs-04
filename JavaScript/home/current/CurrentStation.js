@@ -4,13 +4,14 @@ const longitude = document.querySelector(".current-longitude");
 const button = document.querySelector(".current-button");
 
 const location = document.querySelector(".current-location");
+const coordinates = document.querySelector(".current-coordinates");
 
 const temperature = document.querySelector(".current-temp");
 const minimumTemperature = document.querySelector(".current-temp-min");
 const maximumTemperature = document.querySelector(".current-temp-max");
 const feelsTemperature = document.querySelector(".current-temp-feels");
 
-const precipitation = document.querySelector(".current-precipitation");
+const precipitation = document.querySelector(".current-precip");
 const precipitationProb = document.querySelector(".current-precip-chance");
 const precipitationCover = document.querySelector(".current-precip-cover");
 const precipitationSnow = document.querySelector(".current-precip-snow");
@@ -21,7 +22,8 @@ const winds = document.querySelector(".current-winds");
 const clouds = document.querySelector(".current-clouds");
 
 const URL = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline`;
-const PARAMS = "unitGroup=metric&contentType=json&key=QNPWJA4NCCPXKMWTSB7L97DLX";
+const PARAMS =
+  "unitGroup=metric&contentType=json&key=QNPWJA4NCCPXKMWTSB7L97DLX";
 
 export default function CurrentStation() {
   button.addEventListener("click", async () => {
@@ -41,6 +43,7 @@ async function GetWeatherData() {
 
 function SetWeatherData(weather) {
   location.textContent = weather.resolvedAddress;
+  coordinates.textContent = `${weather.latitude} : ${weather.longitude}`;
 
   temperature.textContent = `${weather.days[0].temp}°C`;
   minimumTemperature.textContent = `${weather.days[0].tempmin}°C`;

@@ -1,24 +1,19 @@
-<div class="personal-location-block">
-  <img class="personal-location-image" src="/home/personal/pin.png" />
-  <h2 class="personal-location-name">Panjim</h2>
+<% header.forEach((head, index) => { %>
+<div class="personal-header-container">
+  <% if(index === 0) { %>
+  <img class="personal-header-image" src="<%= head.image %>" />
+  <h4 class="personal-header-text <%= head.class %>"><%= head.value %></h4>
+
+  <% } else { %>
+  <img class="personal-header-details-image" src="<%= head.image %>" />
+
+  <div class="personal-header-details">
+    <h4 class="personal-header-details-title">Coordinates</h4>
+
+    <h4 class="personal-header-details-text <%= head.class %>">
+      <%= head.value %>
+    </h4>
+  </div>
+  <% } %>
 </div>
-
-<div class="personal-details-block-list">
-  <article class="personal-details-block">
-    <img class="personal-details-image" src="/home/personal/coord.png" />
-
-    <div class="personal-details-container">
-      <h3 class="personal-details-type">Coordinates</h3>
-      <p class="personal-details-description">10.55 : 44.88</p>
-    </div>
-  </article>
-
-  <article class="personal-details-block">
-    <img class="personal-details-image" src="/home/personal/rain.png" />
-
-    <div class="personal-details-container">
-      <h3 class="personal-details-type">Clouds</h3>
-      <p class="personal-details-description">Scattered Clouds</p>
-    </div>
-  </article>
-</div>
+<% }) %>

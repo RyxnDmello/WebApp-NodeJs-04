@@ -1,6 +1,19 @@
-<% header.forEach((head) => { %>
+<% header.forEach((head, index) => { %>
 <div class="current-header-container">
+  <% if(index === 0) { %>
   <img class="current-header-image" src="<%= head.image %>" />
   <h4 class="current-header-text <%= head.class %>"><%= head.value %></h4>
+
+  <% } else { %>
+  <img class="current-header-details-image" src="<%= head.image %>" />
+
+  <div class="current-header-details">
+    <h4 class="current-header-details-title">Coordinates</h4>
+
+    <h4 class="current-header-details-text <%= head.class %>">
+      <%= head.value %>
+    </h4>
+  </div>
+  <% } %>
 </div>
 <% }) %>

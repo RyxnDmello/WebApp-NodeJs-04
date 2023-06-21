@@ -1,5 +1,9 @@
 <h2 class="personal-title">YOUR PERSONAL STATIONS</h2>
 
+<form id="personal-form" action="/weather" method="post">
+  <%- include("./personal/form.ejs") %>
+</form>
+
 <article class="personal-station-list">
   <% personal.forEach((station) => { %>
   <div class="personal-station">

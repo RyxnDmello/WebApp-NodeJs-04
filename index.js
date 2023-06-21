@@ -34,6 +34,16 @@ app.get("/", async (req, res) => {
   res.render("home", { current: CurrentStation, personal: PersonalStations });
 });
 
+app.post("/weather", (req, res) => {
+  const station = {
+    city: req.body.city,
+    latitude: req.body.latitude,
+    longitude: req.body.longitude,
+  }
+
+  console.log(station);
+});
+
 app.listen(process.env.DEVELOPMENT_PORT, () => {
   console.log(`PORT: ${process.env.DEVELOPMENT_PORT} | ACTIVE`);
 });

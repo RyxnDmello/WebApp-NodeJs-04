@@ -1,0 +1,129 @@
+/*-----------------------------------------------*/
+/*----------------- FORM STYLES -----------------*/
+/*-----------------------------------------------*/
+
+#personal-form {
+  box-shadow: 0 0 10px #000000cf;
+  background-color: #000000af;
+  grid-template-columns: auto;
+  justify-content: stretch;
+  border-radius: 7.5px;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+  display: grid;
+  gap: 2rem;
+}
+
+.personal-form-background {
+  position: absolute;
+  object-fit: cover;
+  z-index: -1;
+  width: 100%;
+  inset: 0;
+}
+
+/*------------------------------------*/
+/*-------------- INPUTS --------------*/
+/*------------------------------------*/
+
+.personal-form-inputs {
+  justify-content: stretch;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+  gap: 2rem;
+}
+
+.personal-input-block {
+  grid-template-columns: auto;
+  justify-content: stretch;
+  align-items: center;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.personal-input-label {
+  font-family: "Josefin Sans", sans-serif;
+  text-shadow: 0 2.5px 5px #00000080;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.personal-input {
+  box-shadow: 0 2.5px 5px #00000080;
+  font-family: "Poppins", sans-serif;
+  background-color: transparent;
+  border: 2px solid #fff;
+  padding: 0.25rem 1rem;
+  outline: transparent;
+  letter-spacing: 1px;
+  border-radius: 40px;
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.personal-input::placeholder {
+  color: #fff;
+  opacity: 0.6;
+}
+
+/*----------------------------------------*/
+/*-------------- CONTROLLER --------------*/
+/*----------------------------------------*/
+
+.personal-form-controller {
+  justify-content: space-between;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+}
+
+.personal-form-buttons {
+  justify-content: center;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+  gap: 1rem;
+}
+
+.personal-form-button {
+  box-shadow: 0 2.5px 5px #00000080;
+  background-color: transparent;
+  border: 2px solid #fff;
+  padding: 0.25rem 2.5rem;
+  justify-content: center;
+  grid-auto-flow: column;
+  align-items: center;
+  border-radius: 5px;
+  cursor: pointer;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.personal-form-button-text {
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 0.5px;
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.personal-form-button-image {
+  width: 30px;
+}
+
+.personal-form-information {
+  font-family: "Josefin Sans", sans-serif;
+  text-shadow: 0 2.5px 5px #00000080;
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: #fff;
+}
+
+/*----------------------------------------------*/
+/*----------------- END OF CSS -----------------*/
+/*----------------------------------------------*/

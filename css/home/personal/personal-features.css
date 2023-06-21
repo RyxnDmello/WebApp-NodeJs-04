@@ -181,7 +181,7 @@
 /*-----------------------------------------------*/
 
 .personal-controller {
-  transition: opacity 200ms;
+  transition: opacity 150ms;
   justify-content: center;
   grid-auto-flow: column;
   align-items: center;

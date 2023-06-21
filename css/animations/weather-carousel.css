@@ -1,0 +1,39 @@
+/*----------------------------------------------*/
+/*----------------- ANIMATIONS -----------------*/
+/*----------------------------------------------*/
+
+.slide-fade-out {
+  animation: SlideFadeOut 525ms forwards;
+}
+
+.slide-fade-in {
+  animation: SlideFadeIn 525ms forwards;
+}
+
+@keyframes SlideFadeOut {
+  0% {
+    translate: 0 0;
+    opacity: 1;
+  }
+
+  100% {
+    translate: 0 -20px;
+    opacity: 0;
+  }
+}
+
+@keyframes SlideFadeIn {
+  0% {
+    translate: 0 20px;
+    opacity: 0;
+  }
+
+  100% {
+    translate: 0 0;
+    opacity: 1;
+  }
+}
+
+/*-------------------------------------------*/
+/*------------ END OF ANIMATIONS ------------*/
+/*-------------------------------------------*/

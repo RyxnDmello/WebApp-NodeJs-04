@@ -4,7 +4,7 @@ const buttons = document.querySelectorAll(".current-station-controller-button");
 const search = document.querySelector(".current-button");
 
 const width = carousel.clientWidth - 32;
-const duration = 500;
+const duration = 525;
 
 export default function CurrentCarousel() {
   buttons.forEach((button, index) => {
@@ -17,30 +17,30 @@ export default function CurrentCarousel() {
   search.addEventListener("click", () => {
     SwitchSlides(0);
     ControllerAnimation(0);
-  })
+  });
 }
 
 function SwitchSlides(index) {
   SlideAnimation(0);
 
- setTimeout(() => {
-   slides.forEach((slide) => {
-     slide.style.transform = `translateX(${-index * width}px)`;
-   });
- }, duration + 2.5);
+  setTimeout(() => {
+    slides.forEach((slide) => {
+      slide.style.transform = `translateX(${-index * width}px)`;
+    });
+  }, duration + 2.5);
 
- SlideAnimation(duration + 5);
+  SlideAnimation(duration + 5);
 }
 
 function SlideAnimation(duration) {
   setTimeout(() => {
     slides.forEach((slide) => {
-      if (slide.classList.contains("current-slide-fade-out")) {
-        slide.classList.remove("current-slide-fade-out");
-        slide.classList.add("current-slide-fade-in");
+      if (slide.classList.contains("slide-fade-out")) {
+        slide.classList.remove("slide-fade-out");
+        slide.classList.add("slide-fade-in");
       } else {
-        slide.classList.remove("current-slide-fade-in");
-        slide.classList.add("current-slide-fade-out");
+        slide.classList.remove("slide-fade-in");
+        slide.classList.add("slide-fade-out");
       }
     });
   }, duration);

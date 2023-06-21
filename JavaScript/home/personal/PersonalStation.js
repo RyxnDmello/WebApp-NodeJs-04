@@ -1,9 +1,10 @@
 const containers = document.querySelectorAll(".personal-station");
 const expandButtons = document.querySelectorAll(".personal-expand-button");
 const collapseButtons = document.querySelectorAll(".personal-collapse-button");
+const dateControllers = document.querySelectorAll(".personal-controller");
 
-const stationExpandedHeight = 520;
-const stationCollapsedHeight = 165;
+const stationCollapsedHeight = 150;
+const stationExpandedHeight = 565;
 
 export default function PersonalStation() {
   StationController();
@@ -23,17 +24,17 @@ function Expand(index) {
   containers[index].style.height = `${stationExpandedHeight}px`;
   containers[index].classList.add("container-expanded");
 
-  AnimateButtons(index);
+  ButtonAnimation(index);
 }
 
 function Collapse(index) {
   containers[index].style.height = `${stationCollapsedHeight}px`;
   containers[index].classList.remove("container-expanded");
 
-  AnimateButtons(index);
+  ButtonAnimation(index);
 }
 
-function AnimateButtons(index) {
+function ButtonAnimation(index) {
   if (containers[index].classList.contains("container-expanded")) {
     expandButtons[index].style.pointerEvents = "none";
     expandButtons[index].style.opacity = 0;
@@ -41,6 +42,7 @@ function AnimateButtons(index) {
     setTimeout(() => {
       collapseButtons[index].style.pointerEvents = "all";
       collapseButtons[index].style.opacity = 1;
+      dateControllers[index].style.opacity = 1;
     }, 650);
     return;
   }
@@ -52,4 +54,5 @@ function AnimateButtons(index) {
 
   collapseButtons[index].style.pointerEvents = "none";
   collapseButtons[index].style.opacity = 0;
+  dateControllers[index].style.opacity = 0;
 }

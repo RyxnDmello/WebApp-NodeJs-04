@@ -2,46 +2,90 @@ const carousels = document.querySelectorAll(".personal-features-carousel");
 const buttons = document.querySelectorAll(".personal-controller-button");
 const slides = document.querySelectorAll(".personal-features");
 
-const buttonGroups = [];
-const slideGroups = [];
+const buttonCollection = [];
+const slideCollection = [];
+const duration = 525;
 
 export default function PersonalCarousel() {
-  GetGroups();
+  GetCollection();
+  SwitchSlides();
+}
 
-  buttonGroups.forEach((buttonGroup, buttonGroupsIndex) => {
-    buttonGroup.forEach((button, index) => {
+function SwitchSlides() {
+  buttonCollection.forEach((buttons, collectionIndex) => {
+    buttons.forEach((button, index) => {
       button.addEventListener("click", () => {
-        slideGroups[buttonGroupsIndex].forEach((slide) => {
-          slide.style.translate = `${
-            -index * (carousels[buttonGroupsIndex].clientWidth - 32)
-          }px 0px`;
-        });
+        ButtonsAnimation(collectionIndex, index);
+        MoveSlides(collectionIndex, index);
       });
     });
   });
 }
 
-function GetGroups() {
+function MoveSlides(collectionIndex, index) {
+  SlidesAnimation(collectionIndex, 0);
+
+  setTimeout(() => {
+    slideCollection[collectionIndex].forEach((slide) => {
+      slide.style.transform = `translateX(${
+        -index * (carousels[collectionIndex].clientWidth - 32)
+      }px)`;
+    });
+  }, duration + 2.5);
+
+  SlidesAnimation(collectionIndex, duration + 5);
+}
+
+function SlidesAnimation(collectionIndex, duration) {
+  setTimeout(() => {
+    slideCollection[collectionIndex].forEach((slide) => {
+      if (slide.classList.contains("slide-fade-out")) {
+        slide.classList.remove("slide-fade-out");
+        slide.classList.add("slide-fade-in");
+      } else {
+        slide.classList.remove("slide-fade-in");
+        slide.classList.add("slide-fade-out");
+      }
+    });
+  }, duration);
+}
+
+function ButtonsAnimation(collectionIndex, buttonIndex) {
+  buttonCollection[collectionIndex].forEach((button, index) => {
+    if (buttonIndex === index) {
+      button.style.borderColor = "#fff";
+      button.style.opacity = "1";
+    } else {
+      button.style.borderColor = "transparent";
+      button.style.opacity = "0.25";
+    }
+  });
+}
+
+function GetCollection() {
   let buttonGroup = [];
   let slideGroup = [];
-  let count = 0;
+  let size = 0;
 
   for (let i = 0; i < buttons.length; i++) {
-    if (count === 7) {
-      buttonGroups.push(buttonGroup);
-      slideGroups.push(slideGroup);
+    if (size === 7) {
+      buttonCollection.push(buttonGroup);
+      slideCollection.push(slideGroup);
 
       buttonGroup = [];
       slideGroup = [];
 
-      count = 0;
+      size = 0;
     }
 
     buttonGroup.push(buttons[i]);
     slideGroup.push(slides[i]);
-    count = count + 1;
+    ++size;
   }
 
-  buttonGroups.push(buttonGroup);
-  slideGroups.push(slideGroup);
+  buttonCollection.push(buttonGroup);
+  slideCollection.push(slideGroup);
+
+  console.log(buttonCollection);
+  console.log(slideCollection);
 }

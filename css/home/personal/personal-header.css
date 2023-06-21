@@ -20,9 +20,9 @@
   position: relative;
   border-radius: 5px;
   overflow: hidden;
+  height: 150px;
   padding: 2rem;
   display: grid;
-  gap: 2rem 0;
 }
 
 .personal-background {

@@ -3,12 +3,12 @@
 /*-------------------------------------------------*/
 
 .personal-features-carousel {
+  padding: 4rem 2rem 2.5rem 2rem;
   grid-auto-flow: column;
   justify-content: start;
   align-items: center;
   overflow: hidden;
   width: 1224px;
-  padding: 2rem;
   display: grid;
   gap: 2rem;
 }
@@ -181,17 +181,20 @@
 /*-----------------------------------------------*/
 
 .personal-controller {
+  transition: opacity 200ms;
   justify-content: center;
   grid-auto-flow: column;
   align-items: center;
   display: grid;
+  opacity: 0;
   gap: 1rem;
 }
 
 .personal-controller-button {
-  transition: border-color 350ms, transform 350ms, opacity 350ms;
+  transition: border-color 450ms, transform 450ms, opacity 450ms;
   font-family: "Josefin Sans", sans-serif;
-  padding: 0.5rem 1rem 0.25rem 1rem;
+  padding: 0.5rem 1.25rem 0.25rem 1.25rem;
+  box-shadow: 0 2.5px 5px #00000060;
   border-bottom-right-radius: 25px;
   border-bottom-left-radius: 5px;
   border: 2px solid transparent;

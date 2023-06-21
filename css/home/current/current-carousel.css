@@ -36,7 +36,7 @@
 }
 
 .current-station-controller-button {
-  transition: transform 350ms, opacity 350ms, border-color 350ms;
+  transition: transform 450ms, opacity 450ms, border-color 450ms;
   font-family: "Josefin Sans", sans-serif;
   box-shadow: 0 2.5px 5px #000000a0;
   padding: 0.5rem 1rem 0.25rem 1rem;
@@ -63,42 +63,6 @@
 
 .current-station-controller-button:hover {
   transform: translateY(-5px);
-}
-
-/*--------------------------------------*/
-/*------------- ANIMATIONS -------------*/
-/*--------------------------------------*/
-
-.current-slide-fade-out {
-  animation: CurrentSlideFadeOut 500ms forwards;
-}
-
-.current-slide-fade-in {
-  animation: CurrentSlideFadeIn 500ms forwards;
-}
-
-@keyframes CurrentSlideFadeOut {
-  0% {
-    translate: 0 0;
-    opacity: 1;
-  }
-
-  100% {
-    translate: 0 -20px;
-    opacity: 0;
-  }
-}
-
-@keyframes CurrentSlideFadeIn {
-  0% {
-    translate: 0 20px;
-    opacity: 0;
-  }
-
-  100% {
-    translate: 0 0;
-    opacity: 1;
-  }
 }
 
 /*----------------------------------------*/

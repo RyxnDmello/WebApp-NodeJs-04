@@ -1,0 +1,12 @@
+const AccountModel = require("../models/ModelManager.js");
+
+module.exports.DatabaseCreateAccount = (account) => {
+  const Account = new AccountModel({
+    username: account.username,
+    email: account.email,
+    password: account.password,
+    location: [],
+  });
+
+  Account.save();
+};

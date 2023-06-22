@@ -2,6 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 
+const DatabaseManager = require("./database/DatabaseManager.js");
 const WeatherManager = require("./database/WeatherManager.js");
 
 const app = express();
@@ -16,32 +17,36 @@ app.use(express.static("./css"));
 
 app.set("view engine", "ejs");
 
-app.get("/", async (req, res) => {
-  const stations = [
-    {
-      latitude: 15.4584,
-      longitude: 73.8057,
-    },
-    {
-      latitude: 15.4584,
-      longitude: 73.8057,
-    },
-  ];
+const account = {
+  username: "RyxnDmello",
+  email: "ryan@gmail.com",
+  password: "ryan",
+};
 
+const stations = [];
+
+app.get("/", async (req, res) => {
   const CurrentStation = await WeatherManager.CurrentStation(stations, res);
   const PersonalStations = await WeatherManager.PersonalStations(stations, res);
 
   res.render("home", { current: CurrentStation, personal: PersonalStations });
 });
 
+app.get("/test", (req, res) => {
+  DatabaseManager.CreateAccount(account);
+  res.send("ACCOUNT CREATED");
+});
+
 app.post("/weather", (req, res) => {
-  const station = {
+  const location = {
     city: req.body.city,
     latitude: req.body.latitude,
     longitude: req.body.longitude,
-  }
+  };
 
-  console.log(station);
+  DatabaseManager.AddLocation(account, location);
+
+  res.redirect("/");
 });
 
 app.listen(process.env.DEVELOPMENT_PORT, () => {

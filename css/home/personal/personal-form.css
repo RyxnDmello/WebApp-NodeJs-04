@@ -97,8 +97,8 @@
   padding: 0.25rem 2.5rem;
   justify-content: center;
   grid-auto-flow: column;
+  border-radius: 2.5px;
   align-items: center;
-  border-radius: 5px;
   cursor: pointer;
   display: grid;
   gap: 0.65rem;

@@ -5,7 +5,7 @@ module.exports.DatabaseCreateAccount = (account) => {
     username: account.username,
     email: account.email,
     password: account.password,
-    location: [],
+    locations: [],
   });
 
   Account.save();

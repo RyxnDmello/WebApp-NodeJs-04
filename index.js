@@ -23,11 +23,11 @@ const account = {
   password: "ryan",
 };
 
-const stations = [];
-
 app.get("/", async (req, res) => {
-  const CurrentStation = await WeatherManager.CurrentStation(stations, res);
-  const PersonalStations = await WeatherManager.PersonalStations(stations, res);
+  const locations = await DatabaseManager.GetLocations(account.email);
+
+  const CurrentStation = await WeatherManager.CurrentStation();
+  const PersonalStations = await WeatherManager.PersonalStations(locations);
 
   res.render("home", { current: CurrentStation, personal: PersonalStations });
 });
@@ -44,8 +44,7 @@ app.post("/weather", (req, res) => {
     longitude: req.body.longitude,
   };
 
-  DatabaseManager.AddLocation(account, location);
-
+  DatabaseManager.AddLocation(account.email, location);
   res.redirect("/");
 });
 

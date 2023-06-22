@@ -85,7 +85,4 @@ function GetCollection() {
 
   buttonCollection.push(buttonGroup);
   slideCollection.push(slideGroup);
-
-  console.log(buttonCollection);
-  console.log(slideCollection);
 }

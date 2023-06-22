@@ -34,16 +34,12 @@ const AccountSchema = new mongoose.Schema({
     required: true,
     type: String,
   },
-  locations: {
-    required: true,
-    type: [
-      {
-        type: LocationSchema,
-        required: true,
-        _id: false,
-      },
-    ],
-  },
+  locations: [
+    {
+      type: LocationSchema,
+      _id: false,
+    },
+  ],
 });
 
 const AccountModel = mongoose.model("accounts", AccountSchema);

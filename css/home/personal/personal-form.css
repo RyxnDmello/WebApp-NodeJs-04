@@ -55,6 +55,7 @@
 .personal-input {
   box-shadow: 0 2.5px 5px #00000080;
   font-family: "Poppins", sans-serif;
+  transition: border-color 450ms;
   background-color: transparent;
   border: 2px solid #fff;
   padding: 0.25rem 1rem;
@@ -63,12 +64,20 @@
   border-radius: 40px;
   font-size: 1.25rem;
   font-weight: 300;
+  cursor: pointer;
   color: #fff;
 }
 
 .personal-input::placeholder {
+  transition: opacity 300ms;
   color: #fff;
   opacity: 0.6;
+}
+
+.personal-input:disabled {
+  transition: opacity 450ms;
+  cursor: default;
+  opacity: 0.25;
 }
 
 /*----------------------------------------*/
@@ -122,6 +131,14 @@
   font-size: 1.5rem;
   font-weight: 200;
   color: #fff;
+}
+
+/*----------------------------------------*/
+/*-------------- TRANSITION --------------*/
+/*----------------------------------------*/
+
+.personal-input:not(:disabled):hover::placeholder {
+  opacity: 0;
 }
 
 /*----------------------------------------------*/

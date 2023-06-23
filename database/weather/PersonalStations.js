@@ -13,7 +13,7 @@ module.exports.CreatePersonalStations = async (locations) => {
 };
 
 const GetWeatherData = async (location) => {
-  if (location.city !== undefined) {
+  if (location.city.length !== 0) {
     return await GetWeatherDataByCity(location.city);
   }
 

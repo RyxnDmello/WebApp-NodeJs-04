@@ -6,7 +6,7 @@ const info = document.querySelector(".personal-form-information");
 
 export default function PersonalForm() {
   ProtectInputs();
-  SetInformation();
+  DisplayInformation();
 }
 
 function ProtectInputs() {
@@ -20,38 +20,42 @@ function ProtectInputs() {
 
 function DisableCoordinates() {
   if (inputs[0].value.length > 0) {
-    inputs[1].placeholder = "Not Required";
-    inputs[2].placeholder = "Not Required";
+    inputs[1].classList.add("input-inactive");
+    inputs[2].classList.add("input-inactive");
 
-    inputs[1].disabled = true;
-    inputs[2].disabled = true;
+    inputs[1].required = false;
+    inputs[2].required = false;
   } else {
-    inputs[1].placeholder = "Optional";
-    inputs[2].placeholder = "Optional";
+    inputs[1].classList.remove("input-inactive");
+    inputs[2].classList.remove("input-inactive");
 
-    inputs[1].disabled = false;
-    inputs[2].disabled = false;
+    inputs[1].required = true;
+    inputs[2].required = true;
   }
 }
 
 function DisableCity() {
   if (inputs[1].value.length > 0 || inputs[2].value.length > 0) {
-    inputs[0].placeholder = "Not Required";
-    inputs[0].disabled = true;
+    inputs[0].classList.add("input-inactive");
+    inputs[0].required = false;
   } else {
-    inputs[0].placeholder = "Required";
-    inputs[0].disabled = false;
+    inputs[0].classList.remove("input-inactive");
+    inputs[0].required = true;
   }
 }
 
-function SetInformation() {
+function DisplayInformation() {
+  if (locations.length === 0) {
+    info.textContent = "";
+    return;
+  }
+
   let coordinates = 0;
   let cities = 0;
 
   for (let i = 0; i < locations.length; i++) {
-    if (locations[i].textContent.charAt(0).includes("1234567890")) {
-      ++coordinates;
-    } else ++cities;
+    if (/\d/.test(locations[i].textContent)) ++coordinates;
+    else ++cities;
   }
 
   if (cities === 1) cities = `1 City`;

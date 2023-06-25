@@ -1,0 +1,112 @@
+/*---------------------------------------------*/
+/*-------------- REGISTER STYLES --------------*/
+/*---------------------------------------------*/
+
+#register {
+  background-color: #00000060;
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 4rem;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+  display: grid;
+}
+
+.register-background {
+  position: absolute;
+  object-fit: cover;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+.register-carousel {
+  justify-content: start;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+  width: 500px;
+}
+
+/*---------------------------------------*/
+/*------------- FORM STYLES -------------*/
+/*---------------------------------------*/
+
+.register-form {
+  grid-template-columns: auto;
+  justify-content: stretch;
+  align-items: center;
+  display: grid;
+  width: 500px;
+  gap: 2rem;
+}
+
+/*----------------------------------------*/
+/*------------- INPUT STYLES -------------*/
+/*----------------------------------------*/
+
+.register-input-container {
+  grid-template-columns: auto;
+  justify-content: stretch;
+  align-items: center;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.register-input-label {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.65rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+.register-input {
+  font-family: "Poppins", sans-serif;
+  background-color: transparent;
+  border: 2px solid #fff;
+  padding: 0.25rem 1rem;
+  outline: transparent;
+  letter-spacing: 1px;
+  border-radius: 40px;
+  font-size: 1.2rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+/*-----------------------------------------*/
+/*------------- BUTTON STYLES -------------*/
+/*-----------------------------------------*/
+
+.register-buttons-container {
+  grid-template-columns: repeat(2, auto);
+  justify-content: stretch;
+  align-items: center;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.register-button {
+  justify-content: center;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+  gap: 0.5rem;
+}
+
+.register-button:nth-of-type(3) {
+  grid-column: span 2;
+}
+
+.register-button-image {
+  width: 25px;
+}
+
+/*----------------------------------------*/
+/*-------------- END OF CSS --------------*/
+/*----------------------------------------*/

@@ -1,6 +1,6 @@
-/*--------------------------------------------------------*/
-/*---------------- HEADER FEATURES STYLES ----------------*/
-/*--------------------------------------------------------*/
+/*-------------------------------------------------*/
+/*---------------- FEATURES STYLES ----------------*/
+/*-------------------------------------------------*/
 
 .header-features-container {
   grid-template-columns: auto;
@@ -42,9 +42,9 @@
 /*-----------------------------------------*/
 
 .header-feature-point {
-  justify-content: center;
-  box-shadow: 0 0 10px #000;
+  box-shadow: 2.5px 2.5px 1.5px #00000060;
   border: 2px solid #fff;
+  justify-content: center;
   grid-auto-flow: column;
   border-radius: 10px;
   align-items: center;
@@ -54,16 +54,16 @@
 }
 
 .header-feature-point-image {
-  filter: drop-shadow(2.5px 2.5px 5px);
+  filter: drop-shadow(2.5px 2.5px 1.25px #00000080);
   width: 70px;
 }
 
 .header-feature-point-text {
-  text-shadow: 2.5px 2.5px 5px #000;
+  text-shadow: 1.5px 1.5px 2px #00000080;
   font-family: "Poppins", sans-serif;
   letter-spacing: 0.5px;
   font-size: 1.5rem;
-  font-weight: 300;
+  font-weight: 200;
   cursor: default;
   color: #fff;
 }
@@ -81,8 +81,8 @@
 }
 
 .header-feature-slide-option {
+  filter: drop-shadow(2.5px 2.5px 1.25px #00000080);
   transition: scale 400ms, opacity 400ms;
-  filter: drop-shadow(5px 5px 2.5px);
   cursor: pointer;
   opacity: 0.25;
   width: 40px;

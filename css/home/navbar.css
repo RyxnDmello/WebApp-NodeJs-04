@@ -12,7 +12,7 @@ nav {
 
 .nav-logo-image {
   transition: scale 300ms, translate 150ms;
-  filter: drop-shadow(4px 4px 4px #000);
+  filter: drop-shadow(2px 2px 4px #000);
   width: 45px;
 }
 
@@ -25,16 +25,36 @@ nav {
   grid-auto-flow: column;
   align-items: center;
   display: grid;
-  gap: 1.5rem;
+  gap: 2rem;
+}
+
+.nav-register-link.login {
+  transition: translate 150ms;
+  position: relative;
+}
+
+.nav-register-link.login::before {
+  transition: opacity 350ms, width 350ms;
+  background-color: #fff;
+  border-radius: 40px;
+  position: absolute;
+  bottom: -0.25rem;
+  margin: 0 auto;
+  height: 1.5px;
+  content: "";
+  opacity: 0;
+  width: 5%;
+  right: 0;
+  left: 0;
 }
 
 .nav-register-link.create {
-  transition: background-color 300ms, translate 150ms;
-  box-shadow: 0 0 6.5px #000;
+  transition: background-color 350ms, translate 150ms;
+  box-shadow: 0 0 6.5px #000000a0;
   border: 2px solid #fff;
   justify-content: center;
+  padding: 0.25rem 2.5rem;
   grid-auto-flow: column;
-  padding: 0.25rem 2rem;
   align-items: center;
   border-radius: 40px;
   display: grid;
@@ -44,17 +64,18 @@ nav {
 .nav-register-link-text {
   font-family: "Poppins", sans-serif;
   transition: color 300ms;
-  letter-spacing: 0.65px;
   font-size: 1.25rem;
   font-weight: 300;
   color: #fff;
 }
 
 .nav-register-link.login .nav-register-link-text {
-  text-shadow: 2.5px 2.5px 5px #000;
+  text-shadow: 2.5px 2.5px 5px #000000af;
+  letter-spacing: 1px;
 }
 
 .nav-register-link.create .nav-register-link-text {
+  letter-spacing: 0.65px;
   font-weight: 400;
 }
 
@@ -73,6 +94,19 @@ nav {
 
 .nav-logo:focus .nav-logo-image {
   translate: 0 -5px;
+}
+
+.nav-register-link.login:focus {
+  translate: 0 5px;
+}
+
+.nav-register-link.login:hover::before {
+  width: 50%;
+  opacity: 1;
+}
+
+.nav-register-link.login:focus::before {
+  width: 100%;
 }
 
 .nav-register-link.create:hover {

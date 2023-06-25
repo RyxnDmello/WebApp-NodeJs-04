@@ -23,6 +23,10 @@ const account = {
   password: "ryan",
 };
 
+/*----------------------------------------*/
+/*------------- GET REQUESTS -------------*/
+/*----------------------------------------*/
+
 app.get("/", async (req, res) => {
   const locations = await DatabaseManager.GetLocations(account.email);
 
@@ -32,10 +36,13 @@ app.get("/", async (req, res) => {
   res.render("home", { current: CurrentStation, personal: PersonalStations });
 });
 
-app.get("/test", (req, res) => {
-  DatabaseManager.CreateAccount(account);
-  res.send("ACCOUNT CREATED");
+app.get("/account", (req, res) => {
+  res.render("register");
 });
+
+/*---------------------------------------*/
+/*------------ POST REQUESTS ------------*/
+/*---------------------------------------*/
 
 app.post("/weather", (req, res) => {
   const location = {

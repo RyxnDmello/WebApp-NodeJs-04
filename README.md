@@ -2,7 +2,7 @@
 
 # **📂 CloudSense**
 
-CloudSense is a **Weather Web Application** which uses the _OpenWeatherMap_ API to collect accurate and detailed information related to the current weather. The application has a simple and modern design with a strong server to manage authentication of clients. It uses a database to store the weather data of famous selected cities all around the globe, for easy access for the respective client.
+CloudSense is a **Weather Web Application** which uses the _VisualCrossing_ Weather API to collect accurate and detailed information related to the current weather. The application has a simple and modern design with a strong server to manage authentication of clients. It uses a database to store the weather data of famous selected cities all around the globe, for easy access for the respective client.
 
 # **🤖 TECHNOLOGY**
 
@@ -16,12 +16,12 @@ CloudSense is a **Weather Web Application** which uses the _OpenWeatherMap_ API 
 
 - ✅ Node Js (Framework)
 - ✅ Express Js (Server-Side Library)
-- ❌ Mongoose (Express Js Library)
+- ✅ Mongoose (Express Js Library)
 
 ### **💻 DATABASE & TOOLS**
 
-- ❌ MongoDB (Cloud Database)
-- ❌ Mongoose (Express Js Library)
+- ✅ MongoDB (Cloud Database)
+- ✅ Mongoose (Express Js Library)
 
 # **💎 FEEDBACK**
 

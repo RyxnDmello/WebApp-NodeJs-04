@@ -1,6 +1,7 @@
 @import url("./common/fonts.css");
 
-@import url("./register/navbar.css");
+@import url("./register/carousel.css");
+@import url("./register/information.css");
 @import url("./register/form.css");
 
 * {

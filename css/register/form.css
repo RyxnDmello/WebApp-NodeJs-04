@@ -1,49 +1,13 @@
 /*---------------------------------------------*/
-/*-------------- REGISTER STYLES --------------*/
+/*---------------- FORM STYLES ----------------*/
 /*---------------------------------------------*/
-
-#register {
-  background-color: #00000060;
-  grid-template-columns: auto;
-  justify-content: center;
-  align-items: center;
-  padding: 6rem 4rem;
-  position: relative;
-  overflow: hidden;
-  cursor: default;
-  display: grid;
-}
-
-.register-background {
-  position: absolute;
-  object-fit: cover;
-  margin: 0 auto;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  right: 0;
-  left: 0;
-  top: 0;
-}
-
-.register-carousel {
-  justify-content: start;
-  grid-auto-flow: column;
-  align-items: center;
-  display: grid;
-  width: 500px;
-}
-
-/*---------------------------------------*/
-/*------------- FORM STYLES -------------*/
-/*---------------------------------------*/
 
 .register-form {
   grid-template-columns: auto;
   justify-content: stretch;
   align-items: center;
   display: grid;
-  width: 500px;
+  width: 450px;
   gap: 2rem;
 }
 

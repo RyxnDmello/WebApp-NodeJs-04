@@ -1,0 +1,33 @@
+/*----------------------------------------------------*/
+/*---------------- INFORMATION STYLES ----------------*/
+/*----------------------------------------------------*/
+
+.register-information {
+  justify-content: center;
+  grid-auto-flow: row;
+  align-items: start;
+  display: grid;
+  gap: 1rem;
+}
+
+.register-info-text-container {
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.register-info-title {
+  font-family: "Queenside Light", sans-serif;
+  font-size: 4.5rem;
+  font-weight: 100;
+  color: #fff;
+}
+
+.register-info-description {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: #bfbfbf;
+  font-size: 1rem;
+}

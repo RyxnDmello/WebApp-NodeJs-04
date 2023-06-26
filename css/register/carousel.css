@@ -1,0 +1,53 @@
+/*---------------------------------------------*/
+/*-------------- REGISTER STYLES --------------*/
+/*---------------------------------------------*/
+
+#register {
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+  padding: 6rem 2rem;
+  cursor: default;
+  display: grid;
+}
+
+/*-----------------------------------------*/
+/*------------ CAROUSEL STYLES ------------*/
+/*-----------------------------------------*/
+
+.register-carousel {
+  box-shadow: 0 0 10px #000000a0;
+  background-color: #00000060;
+  justify-content: start;
+  grid-auto-flow: column;
+  align-items: center;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
+  padding: 4rem;
+  display: grid;
+  width: 1200px;
+}
+
+.register-slide {
+  justify-content: space-between;
+  grid-auto-flow: column;
+  align-items: stretch;
+  display: grid;
+  width: 1072px;
+}
+
+.register-carousel-background {
+  position: absolute;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+/*----------------------------------------*/
+/*-------------- END OF CSS --------------*/
+/*----------------------------------------*/

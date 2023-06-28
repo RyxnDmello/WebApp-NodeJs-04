@@ -17,7 +17,6 @@
 
 .register-carousel {
   box-shadow: 0 0 10px #000000a0;
-  background-color: #00000060;
   justify-content: start;
   grid-auto-flow: column;
   align-items: center;
@@ -27,10 +26,12 @@
   padding: 4rem;
   display: grid;
   width: 1200px;
+  gap: 4rem;
 }
 
 .register-slide {
   justify-content: space-between;
+  transition: translate 450ms;
   grid-auto-flow: column;
   align-items: stretch;
   display: grid;

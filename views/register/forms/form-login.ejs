@@ -1,0 +1,48 @@
+<div class="register-information">
+  <div class="register-info-text-container">
+    <h2 class="register-info-title">Create Account</h2>
+
+    <p class="register-info-description">Get realtime weather, anytime!</p>
+  </div>
+</div>
+
+<form class="register-form" action="/account/create">
+  <div class="register-input-container">
+    <h4 class="register-input-label">Email</h4>
+    <input
+      class="register-input"
+      autocomplete="off"
+      required="false"
+      name="email"
+      type="email"
+    />
+  </div>
+
+  <div class="register-input-container">
+    <h4 class="register-input-label">Password</h4>
+    <input
+      class="register-input"
+      autocomplete="off"
+      required="false"
+      name="password"
+      type="password"
+    />
+  </div>
+
+  <div class="register-buttons-container">
+    <button class="register-button login" type="submit">
+      <img class="register-button-image" src="/buttons/profile.png" />
+      <h4 class="register-button-text">Login</h4>
+    </button>
+
+    <button class="register-button reset" type="reset">
+      <img class="register-button-image" src="/buttons/profile.png" />
+      <h4 class="register-button-text">Clear</h4>
+    </button>
+
+    <button class="register-button switch" type="button">
+      <img class="register-button-image" src="/buttons/profile.png" />
+      <h4 class="register-button-text">Signup Instead?</h4>
+    </button>
+  </div>
+</form>

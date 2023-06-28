@@ -24,15 +24,15 @@
   </head>
 
   <body>
-    <header id="header"><%- include("./partials/home/header.ejs") %></header>
+    <header id="header"><%- include("./home/header.ejs") %></header>
 
     <main>
       <section id="current">
-        <%- include("./partials/home/current.ejs", { current: current }) %>
+        <%- include("./home/current.ejs", { current: current }) %>
       </section>
 
       <section id="personal">
-        <%- include("./partials/home/personal.ejs", { personal: personal }) %>
+        <%- include("./home/personal.ejs", { personal: personal }) %>
       </section>
     </main>
 

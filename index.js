@@ -5,6 +5,8 @@ const bodyParser = require("body-parser");
 const DatabaseManager = require("./database/DatabaseManager.js");
 const WeatherManager = require("./database/WeatherManager.js");
 
+const RegisterTemplate = require("./json/register.json");
+
 const app = express();
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -37,7 +39,9 @@ app.get("/", async (req, res) => {
 });
 
 app.get("/account", (req, res) => {
-  res.render("register");
+  res.render("register", {
+    forms: RegisterTemplate.forms,
+  });
 });
 
 /*---------------------------------------*/

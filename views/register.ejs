@@ -24,7 +24,9 @@
 
   <body>
     <main>
-      <section id="register"><%- include("./register/form.ejs") %></section>
+      <section id="register">
+        <%- include("./register/form.ejs", { forms: forms }) %>
+      </section>
     </main>
 
     <script type="module" src="/Register.js"></script>

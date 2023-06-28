@@ -1,0 +1,14 @@
+{
+  "forms": {
+    "create": {
+      "title": "Create Account",
+      "description": "CloudSense utilizes cutting-edge next-generation technologies to provide you with accurate and real-time weather information.",
+      "points": [
+        "Real-Time Weather Information",
+        "Accurate & Detailed Information",
+        "City or Coordinates Based Weather",
+        "Create Personal Weather Widgets"
+      ]
+    }
+  }
+}

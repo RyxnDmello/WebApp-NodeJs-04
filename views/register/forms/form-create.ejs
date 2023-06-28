@@ -1,9 +1,19 @@
 <div class="register-information">
-  <div class="register-info-text-container">
-    <h2 class="register-info-title">Create Account</h2>
-
-    <p class="register-info-description">Get realtime weather, anytime!</p>
+  <div class="register-title-container">
+    <h2 class="register-title"><%= form.title %></h2>
+    <p class="register-description"><%= form.description %></p>
   </div>
+
+  <div class="register-points-container">
+    <% form.points.forEach((point) => { %>
+    <div class="register-point">
+      <img class="register-point-image" src="/register/point.png" />
+      <p class="register-point-text"><%= point %></p>
+    </div>
+    <% }) %>
+  </div>
+
+  <div class="register-links-container"></div>
 </div>
 
 <form class="register-form" action="/account/create">

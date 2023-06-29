@@ -1,13 +1,101 @@
 {
   "forms": {
     "create": {
-      "title": "Create Account",
-      "description": "CloudSense utilizes cutting-edge next-generation technologies to provide you with accurate and real-time weather information.",
+      "type": "create",
+      "header": {
+        "title": "Create Account",
+        "description": "CloudSense utilizes cutting-edge next-generation technologies to provide you with accurate and real-time weather information."
+      },
       "points": [
         "Real-Time Weather Information",
         "Accurate & Detailed Information",
         "City or Coordinates Based Weather",
         "Create Personal Weather Widgets"
+      ],
+      "socials": [
+        {
+          "image": "/buttons/instagram.png",
+          "URL": "https://www.instagram.com/ryxndmello10/"
+        },
+        {
+          "image": "/buttons/discord.png",
+          "URL": "https://discord.com/channels/ryxndmello/"
+        },
+        {
+          "image": "/buttons/twitter.png",
+          "URL": "https://twitter.com/RyxnDmello"
+        }
+      ],
+      "other": {
+        "URL": "/#current",
+        "text": "Quick Search",
+        "image": "/buttons/search.png"
+      },
+      "buttons": [
+        {
+          "type": "submit",
+          "class": "create",
+          "image": "/buttons/profile.png",
+          "text": "Create"
+        },
+        {
+          "type": "reset",
+          "class": "reset",
+          "image": "/buttons/reset.png",
+          "text": "Reset"
+        },
+        {
+          "type": "button",
+          "class": "switch",
+          "image": "/buttons/login.png",
+          "text": "Login Instead?"
+        }
+      ]
+    },
+    "login": {
+      "type": "login",
+      "header": {
+        "title": "Welcome Back",
+        "description": "CloudSense utilizes cutting-edge next-generation technologies to provide you with accurate and real-time weather information."
+      },
+      "socials": [
+        {
+          "image": "/buttons/instagram.png",
+          "URL": "https://www.instagram.com/ryxndmello10/"
+        },
+        {
+          "image": "/buttons/discord.png",
+          "URL": "https://discord.com/channels/ryxndmello/"
+        },
+        {
+          "image": "/buttons/twitter.png",
+          "URL": "https://twitter.com/RyxnDmello"
+        }
+      ],
+      "other": {
+        "URL": "/#current",
+        "text": "Quick Search",
+        "image": "/buttons/search.png"
+      },
+      "buttons": [
+        {
+          "type": "submit",
+          "class": "create",
+          "image": "/buttons/login.png",
+          "text": "Login"
+        },
+        {
+          "type": "reset",
+          "class": "reset",
+          "image": "/buttons/reset.png",
+          "text": "Reset"
+        },
+        {
+          "type": "button",
+          "class": "switch",
+          "image": "/buttons/profile.png",
+          "text": "Create Instead?"
+        }
       ]
     }
   }

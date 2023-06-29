@@ -114,7 +114,7 @@ const StationTemplate = (weather, day) => {
       },
     ],
   };
-}
+};
 
 const GetDate = (date) => {
   return DateTime.fromISO(date).toFormat("dd MMMM").toString();

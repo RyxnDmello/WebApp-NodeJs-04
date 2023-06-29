@@ -1,11 +1,12 @@
 <article class="register-carousel">
   <article class="register-slide">
-    <%- include("./forms/form-create.ejs", { form: forms.create }) %>
+    <%- include("./forms/form-template.ejs", { form: forms.create }) %>
   </article>
 
   <article class="register-slide">
-    <%- include("./forms/form-login.ejs") %>
+    <%- include("./forms/form-template.ejs", { form: forms.login }) %>
   </article>
 
   <img class="register-carousel-background" src="/register/background-1.jpg" />
+  <img class="register-carousel-background" src="/register/background-2.jpg" />
 </article>

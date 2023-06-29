@@ -1,0 +1,79 @@
+<div class="register-information">
+  <div class="register-header-container">
+    <h2 class="register-header-title"><%= form.header.title %></h2>
+    <p class="register-header-description"><%= form.header.description %></p>
+  </div>
+
+  <% if(form.points !== undefined) { %>
+  <div class="register-points-container">
+    <% form.points.forEach((point) => { %>
+    <div class="register-point">
+      <img class="register-point-image" src="/register/point.png" />
+      <p class="register-point-text"><%= point %></p>
+    </div>
+    <% }) %>
+  </div>
+  <% } %>
+
+  <div class="register-socials-container">
+    <% form.socials.forEach((social) => { %>
+    <a class="register-social-link" href="<%= social.URL %>" target="_blank">
+      <img class="register-social-link-image" src="<%= social.image %>" />
+    </a>
+    <% }) %>
+  </div>
+
+  <a class="register-other-link" href="<%= form.other.URL %>">
+    <img class="register-other-link-image" src="<%= form.other.image %>" />
+    <h4 class="register-other-link-text"><%= form.other.text %></h4>
+  </a>
+</div>
+
+<form class="register-form" action="/account/<%= form.type %>" method="post">
+  <% if(form.type === "create") { %>
+  <div class="register-input-container">
+    <h4 class="register-input-label">Username</h4>
+    <input
+      class="register-input"
+      autocomplete="off"
+      required="false"
+      name="username"
+      type="text"
+    />
+  </div>
+  <% } %>
+
+  <div class="register-input-container">
+    <h4 class="register-input-label">Email</h4>
+    <input
+      class="register-input"
+      autocomplete="off"
+      required="false"
+      name="email"
+      type="email"
+    />
+  </div>
+
+  <div class="register-input-container">
+    <h4 class="register-input-label">Password</h4>
+    <input
+      class="register-input"
+      autocomplete="off"
+      required="false"
+      name="password"
+      type="password"
+    />
+  </div>
+
+  <div class="register-buttons-container">
+    <% form.buttons.forEach((button) => { %>
+    <button
+      class="register-button <%= button.class %>"
+      type="<%= button.type %>"
+    >
+      <img class="register-button-image" src="<%= button.image %>" />
+      <h4 class="register-button-text"><%= button.text %></h4>
+    </button>
+    <% }) %>
+  </div>
+</form>

@@ -48,6 +48,29 @@ app.get("/account", (req, res) => {
 /*------------ POST REQUESTS ------------*/
 /*---------------------------------------*/
 
+app.post("/account/:type", (req, res) => {
+  if (req.params.type === "create") {
+    const account = {
+      username: req.body.username,
+      password: req.body.password,
+      email: req.body.email,
+    };
+
+    DatabaseManager.CreateAccount(account);
+    return;
+  }
+
+  if (req.params.type === "login") {
+    const account = {
+      email: req.body.email,
+      password: req.body.password,
+    };
+
+    DatabaseManager.LoginAccount(account);
+    return;
+  }
+});
+
 app.post("/weather", (req, res) => {
   const location = {
     city: req.body.city,

@@ -1,10 +1,10 @@
 const AccountModel = require("../models/ModelManager.js");
 
-module.exports.DatabaseCreateAccount = async (account) => {
+module.exports.DatabaseCreateAccount = async (account, request, response) => {
   const databaseAccount = await AccountModel.findOne({ email: account.email });
 
   if (databaseAccount !== null) {
-    console.log("ACCOUNT ALREADY CREATED");
+    response.render("/error/account-present");
     return;
   }
 
@@ -17,16 +17,30 @@ module.exports.DatabaseCreateAccount = async (account) => {
 
   const error = await clientAccount.save();
 
-  console.log(error);
-};
-
-module.exports.DatabaseLoginAccount = async (account) => {
-  const databaseAccount = await AccountModel.findOne({ email: account.email });
-
-  if (databaseAccount === null) {
-    console.log("ACCOUNT DOES NOT EXIST");
+  if (error.email !== account.email) {
+    response.render("/error/database-down");
     return;
   }
 
-  console.log("LOGGED IN");
+  request.session.username = account.username;
+  request.session.email = account.email;
+  response.redirect("/");
+};
+
+module.exports.DatabaseLoginAccount = async (account, request, response) => {
+  const databaseAccount = await AccountModel.findOne({ email: account.email });
+
+  if (databaseAccount === null) {
+    response.render("/error/account-absent");
+    return;
+  }
+
+  if (databaseAccount.password !== account.password) {
+    response.render("/error/account-invalid-password");
+    return;
+  }
+
+  request.session.username = databaseAccount.username;
+  request.session.email = account.email;
+  response.redirect("/");
 };

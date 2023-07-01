@@ -24,7 +24,9 @@
   </head>
 
   <body>
-    <header id="header"><%- include("./home/header.ejs") %></header>
+    <header id="header">
+      <%- include("./home/header.ejs", { username: username }) %>
+    </header>
 
     <main>
       <section id="current">

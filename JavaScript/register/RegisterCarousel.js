@@ -1,6 +1,7 @@
 const carousel = document.querySelector(".register-carousel");
 const slides = document.querySelectorAll(".register-slide");
 const buttons = document.querySelectorAll(".register-button.switch");
+const background = document.querySelector(".register-carousel-background");
 
 const width = carousel.clientWidth - 64;
 
@@ -19,3 +20,5 @@ function MoveSlides(index) {
     slide.style.translate = `${direction * width}px 0`;
   });
 }
+
+function BackgroundAnimation() {}

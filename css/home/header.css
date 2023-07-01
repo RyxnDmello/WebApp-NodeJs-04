@@ -32,7 +32,3 @@ header {
   object-position: 0 -2rem;
   z-index: -2;
 }
-
-.header-hide {
-  opacity: 0;
-}

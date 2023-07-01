@@ -1,12 +1,12 @@
 const AccountManager = require("./account/AccountManager.js");
 const LocationManager = require("./account/LocationManager.js");
 
-module.exports.CreateAccount = (account) => {
-  AccountManager.DatabaseCreateAccount(account);
+module.exports.CreateAccount = (account, request, response) => {
+  AccountManager.DatabaseCreateAccount(account, request, response);
 };
 
-module.exports.LoginAccount = (account) => {
-  AccountManager.DatabaseLoginAccount(account);
+module.exports.LoginAccount = (account, request, response) => {
+  AccountManager.DatabaseLoginAccount(account, request, response);
 };
 
 module.exports.GetLocations = async (email) => {

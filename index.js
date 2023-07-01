@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
+const session = require("express-session");
 
 const DatabaseManager = require("./database/DatabaseManager.js");
 const WeatherManager = require("./database/WeatherManager.js");
@@ -17,31 +18,43 @@ app.use(express.static("./fonts"));
 app.use(express.static("./json"));
 app.use(express.static("./css"));
 
-app.set("view engine", "ejs");
+app.use(
+  session({
+    secret: "WebApp-NodeJs-04",
+    cookie: { secure: false },
+    saveUninitialized: false,
+    resave: false,
+  })
+);
 
-const account = {
-  username: "RyxnDmello",
-  email: "ryan@gmail.com",
-  password: "ryan",
-};
+app.set("view engine", "ejs");
 
 /*----------------------------------------*/
 /*------------- GET REQUESTS -------------*/
 /*----------------------------------------*/
 
 app.get("/", async (req, res) => {
-  const locations = await DatabaseManager.GetLocations(account.email);
+  const locations =
+    (await DatabaseManager.GetLocations(req.session.email)) ?? [];
 
   const CurrentStation = await WeatherManager.CurrentStation();
   const PersonalStations = await WeatherManager.PersonalStations(locations);
 
-  res.render("home", { current: CurrentStation, personal: PersonalStations });
+  res.render("home", {
+    username: req.session.username ?? null,
+    current: CurrentStation,
+    personal: PersonalStations,
+  });
 });
 
 app.get("/account", (req, res) => {
   res.render("register", {
     forms: RegisterTemplate.forms,
   });
+});
+
+app.get("*", (req, res) => {
+  res.send("INVALID ROUTE");
 });
 
 /*---------------------------------------*/
@@ -56,7 +69,7 @@ app.post("/account/:type", (req, res) => {
       email: req.body.email,
     };
 
-    DatabaseManager.CreateAccount(account);
+    DatabaseManager.CreateAccount(account, req, res);
     return;
   }
 
@@ -66,7 +79,7 @@ app.post("/account/:type", (req, res) => {
       password: req.body.password,
     };
 
-    DatabaseManager.LoginAccount(account);
+    DatabaseManager.LoginAccount(account, req, res);
     return;
   }
 });
@@ -78,7 +91,7 @@ app.post("/weather", (req, res) => {
     longitude: req.body.longitude,
   };
 
-  DatabaseManager.AddLocation(account.email, location);
+  DatabaseManager.AddLocation(req.session.email, location);
   res.redirect("/");
 });
 

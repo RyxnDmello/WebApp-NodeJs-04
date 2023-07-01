@@ -17,10 +17,10 @@ nav {
 }
 
 /*-------------------------------------------*/
-/*------------- REGISTER STYLES -------------*/
+/*--------------- LINK STYLES ---------------*/
 /*-------------------------------------------*/
 
-.nav-register-container {
+.nav-links-container {
   justify-content: center;
   grid-auto-flow: column;
   align-items: center;
@@ -28,27 +28,7 @@ nav {
   gap: 2rem;
 }
 
-.nav-register-link.login {
-  transition: translate 150ms;
-  position: relative;
-}
-
-.nav-register-link.login::before {
-  transition: opacity 350ms, width 350ms;
-  background-color: #fff;
-  border-radius: 40px;
-  position: absolute;
-  bottom: -0.25rem;
-  margin: 0 auto;
-  height: 1.5px;
-  content: "";
-  opacity: 0;
-  width: 5%;
-  right: 0;
-  left: 0;
-}
-
-.nav-register-link.create {
+.nav-register-link {
   transition: background-color 350ms, translate 150ms;
   box-shadow: 0 0 6.5px #000000a0;
   border: 2px solid #fff;
@@ -64,19 +44,10 @@ nav {
 .nav-register-link-text {
   font-family: "Poppins", sans-serif;
   transition: color 300ms;
-  font-size: 1.25rem;
-  font-weight: 300;
-  color: #fff;
-}
-
-.nav-register-link.login .nav-register-link-text {
-  text-shadow: 2.5px 2.5px 5px #000000af;
-  letter-spacing: 1px;
-}
-
-.nav-register-link.create .nav-register-link-text {
   letter-spacing: 0.65px;
+  font-size: 1.25rem;
   font-weight: 400;
+  color: #fff;
 }
 
 .nav-register-link-image {
@@ -96,33 +67,32 @@ nav {
   translate: 0 -5px;
 }
 
-.nav-register-link.login:focus {
-  translate: 0 5px;
-}
-
-.nav-register-link.login:hover::before {
-  width: 50%;
-  opacity: 1;
-}
-
-.nav-register-link.login:focus::before {
-  width: 100%;
-}
-
-.nav-register-link.create:hover {
+.nav-register-link:hover {
   background-color: #fff;
 }
 
-.nav-register-link.create:focus {
+.nav-register-link:focus {
   translate: 0 5px;
 }
 
-.nav-register-link.create:hover .nav-register-link-text {
+.nav-register-link:hover .nav-register-link-text {
   color: #000;
 }
 
-.nav-register-link.create:hover .nav-register-link-image {
+.nav-register-link:hover .nav-register-link-image {
   filter: invert(1);
+}
+
+/*------------------------------------*/
+/*------------- USERNAME -------------*/
+/*------------------------------------*/
+
+.nav-username-text {
+  font-family: "Josefin Sans", sans-serif;
+  letter-spacing: 0.5px;
+  font-size: 1.25rem;
+  font-weight: 200;
+  color: #fff;
 }
 
 /*--------------------------------------------------*/

@@ -16,6 +16,7 @@
 /*-----------------------------------------*/
 
 .register-carousel {
+  transition: background-color 650ms;
   box-shadow: 0 0 10px #000000a0;
   justify-content: start;
   grid-auto-flow: column;
@@ -29,25 +30,37 @@
   gap: 4rem;
 }
 
+.register-carousel-background-1,
+.register-carousel-background-2 {
+  position: absolute;
+  object-fit: cover;
+  margin: 0 auto;
+  height: 100%;
+  width: 100%;
+  right: 0;
+  left: 0;
+  top: 0;
+}
+
+.register-carousel-background-1 {
+  transition: opacity 650ms;
+  object-position: 0 -8rem;
+  z-index: -1;
+}
+
+.register-carousel-background-2 {
+  background-color: black;
+  z-index: -2;
+}
+
 .register-slide {
   justify-content: space-between;
-  transition: translate 450ms;
+  transition: translate 650ms;
   grid-auto-flow: column;
   align-items: start;
   display: grid;
   width: 1072px;
   gap: 0 4rem;
-}
-
-.register-carousel-background {
-  position: absolute;
-  margin: 0 auto;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-  right: 0;
-  left: 0;
-  top: 0;
 }
 
 /*----------------------------------------*/

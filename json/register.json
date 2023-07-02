@@ -18,12 +18,16 @@
           "URL": "https://www.instagram.com/ryxndmello10/"
         },
         {
-          "image": "/buttons/discord.png",
-          "URL": "https://discord.com/channels/ryxndmello/"
-        },
-        {
           "image": "/buttons/twitter.png",
           "URL": "https://twitter.com/RyxnDmello"
+        },
+        {
+          "image": "/buttons/linkedin.png",
+          "URL": "https://www.linkedin.com/in/ryanndmello/"
+        },
+        {
+          "image": "/buttons/discord.png",
+          "URL": "https://discord.com/channels/ryxndmello/"
         }
       ],
       "other": {
@@ -64,12 +68,16 @@
           "URL": "https://www.instagram.com/ryxndmello10/"
         },
         {
-          "image": "/buttons/discord.png",
-          "URL": "https://discord.com/channels/ryxndmello/"
-        },
-        {
           "image": "/buttons/twitter.png",
           "URL": "https://twitter.com/RyxnDmello"
+        },
+        {
+          "image": "/buttons/linkedin.png",
+          "URL": "https://www.linkedin.com/in/ryanndmello/"
+        },
+        {
+          "image": "/buttons/discord.png",
+          "URL": "https://discord.com/channels/ryxndmello/"
         }
       ],
       "other": {

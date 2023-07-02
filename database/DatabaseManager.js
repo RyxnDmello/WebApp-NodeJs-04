@@ -10,7 +10,9 @@ module.exports.LoginAccount = (account, request, response) => {
 };
 
 module.exports.GetLocations = async (email) => {
-  return LocationManager.DatabaseGetLocations(email);
+  return email !== undefined
+    ? await LocationManager.DatabaseGetLocations(email)
+    : [];
 };
 
 module.exports.AddLocation = (email, location) => {

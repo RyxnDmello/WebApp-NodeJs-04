@@ -3,16 +3,25 @@
     <img class="nav-logo-image" src="/buttons/logo.png" />
   </a>
 
-  <% if(username === null) { %>
   <article class="nav-links-container">
+    <div class="nav-social-links-container">
+      <% navbar.socials.forEach((social) => { %>
+      <a class="nav-social-link" href="<%= social.URL %>">
+        <img class="nav-social-link-image" src="<%= social.image %>" />
+      </a>
+      <% }) %>
+    </div>
+
+    <% if(username === null) { %>
     <a href="/account" class="nav-register-link">
       <img class="nav-register-link-image" src="/buttons/profile.png" />
       <h4 class="nav-register-link-text">Register</h4>
     </a>
+    <% } else { %>
+    <div class="nav-username">
+      <img class="nav-username-image" src="/home/header/user.png" />
+      <h4 class="nav-username-text"><%= username %></h4>
+    </div>
+    <% } %>
   </article>
-  <% } else { %>
-  <div class="nav-username">
-    <h4 class="nav-username-text"><%= username %></h4>
-  </div>
-  <% } %>
 </nav>

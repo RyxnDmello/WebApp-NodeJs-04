@@ -6,6 +6,7 @@ const session = require("express-session");
 const DatabaseManager = require("./database/DatabaseManager.js");
 const WeatherManager = require("./database/WeatherManager.js");
 
+const HomeTemplate = require("./json/home.json");
 const RegisterTemplate = require("./json/register.json");
 
 const app = express();
@@ -34,14 +35,13 @@ app.set("view engine", "ejs");
 /*----------------------------------------*/
 
 app.get("/", async (req, res) => {
-  const locations =
-    (await DatabaseManager.GetLocations(req.session.email)) ?? [];
-
+  const locations = await DatabaseManager.GetLocations(req.session.email);
   const CurrentStation = await WeatherManager.CurrentStation();
   const PersonalStations = await WeatherManager.PersonalStations(locations);
 
   res.render("home", {
     username: req.session.username ?? null,
+    header: HomeTemplate.header,
     current: CurrentStation,
     personal: PersonalStations,
   });

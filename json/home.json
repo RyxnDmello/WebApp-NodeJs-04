@@ -1,0 +1,49 @@
+{
+  "header": {
+    "navbar": {
+      "socials": [
+        {
+          "image": "/buttons/instagram.png",
+          "URL": "https://www.instagram.com/ryxndmello10/"
+        },
+        {
+          "image": "/buttons/twitter.png",
+          "URL": "https://twitter.com/RyxnDmello"
+        },
+        {
+          "image": "/buttons/linkedin.png",
+          "URL": "https://www.linkedin.com/in/ryanndmello/"
+        },
+        {
+          "image": "/buttons/discord.png",
+          "URL": "https://discord.com/channels/ryxndmello/"
+        }
+      ],
+      "register": {
+        "image": "/buttons/profile.png",
+        "URL": "/account"
+      },
+      "user": {
+        "image": "/home/header/user.png"
+      }
+    },
+    "information": {
+      "header": {
+        "title": "CloudSense",
+        "description": "Create a list of your favorite cities and monitor their weather details at all times. Always stay updated with the help of our worldwide weather satellites."
+      },
+      "links": [
+        {
+          "image": "/buttons/search.png",
+          "text": "Explore",
+          "URL": "/#current"
+        },
+        {
+          "image": "/buttons/add.png",
+          "text": "Create",
+          "URL": "/#personal"
+        }
+      ]
+    }
+  }
+}

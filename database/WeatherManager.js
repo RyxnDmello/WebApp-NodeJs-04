@@ -6,5 +6,5 @@ module.exports.CurrentStation = async () => {
 };
 
 module.exports.PersonalStations = async (locations) => {
-  return await CreatePersonalStations(locations);
+  return locations.length === 0 ? [] : await CreatePersonalStations(locations);
 };

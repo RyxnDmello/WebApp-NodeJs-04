@@ -6,8 +6,8 @@
   grid-template-columns: auto;
   justify-content: center;
   align-items: center;
-  padding: 5rem 0 0 0;
   cursor: default;
+  height: 100vh;
   display: grid;
 }
 

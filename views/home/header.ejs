@@ -1,26 +1,26 @@
-<%- include("./navbar.ejs", { username: username }) %>
+<%- include("./navbar.ejs", { username: username, navbar: header.navbar }) %>
 
 <article class="header-information-container">
   <div class="header-text-container">
-    <h1 class="header-title">CloudSense</h1>
+    <h1 class="header-title"><%= header.information.header.title %></h1>
 
     <p class="header-description">
-      Create a list of your favorite cities and monitor their weather details at
-      all times. Always stay updated with the help of our worldwide weather
-      satellites.
+      <%= header.information.header.description %>
     </p>
   </div>
 
   <div class="header-links-container">
-    <a class="header-link" href="#current">
-      <img class="header-link-image" src="/buttons/search.png" />
-      <h4 class="header-link-text">Explore</h4>
+    <% header.information.links.forEach((link) => { %>
+    <a class="header-link" href="<%= link.URL %>">
+      <img class="header-link-image" src="<%= link.image %>" />
+      <h4 class="header-link-text"><%= link.text %></h4>
     </a>
-
-    <a class="header-link" href="#personal">
-      <h4 class="header-link-text">Create</h4>
-      <img class="header-link-image" src="/buttons/add.png" />
+    <% }) %> <% if(username !== null) { %>
+    <a class="header-link" href="/account">
+      <img class="header-link-image" src="/buttons/profile.png" />
+      <h4 class="header-link-text">Register</h4>
     </a>
+    <% } %>
   </div>
 </article>
 

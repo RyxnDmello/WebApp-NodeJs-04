@@ -17,7 +17,7 @@
 
 .register-carousel {
   transition: background-color 650ms;
-  box-shadow: 0 0 10px #000000a0;
+  box-shadow: 0 0 15px #000;
   justify-content: start;
   grid-auto-flow: column;
   align-items: center;

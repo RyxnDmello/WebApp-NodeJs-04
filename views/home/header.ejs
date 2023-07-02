@@ -2,26 +2,25 @@
 
 <article class="header-information-container">
   <div class="header-text-container">
-    <h1 class="header-title"><%= header.information.header.title %></h1>
-
-    <p class="header-description">
-      <%= header.information.header.description %>
-    </p>
+    <h1 class="header-title"><%= header.info.header.title %></h1>
+    <p class="header-description"><%= header.info.header.description %></p>
   </div>
 
+  <% if(username !== null) { %>
   <div class="header-links-container">
-    <% header.information.links.forEach((link) => { %>
+    <% header.info.links.forEach((link) => { %>
     <a class="header-link" href="<%= link.URL %>">
       <img class="header-link-image" src="<%= link.image %>" />
       <h4 class="header-link-text"><%= link.text %></h4>
     </a>
-    <% }) %> <% if(username !== null) { %>
-    <a class="header-link" href="/account">
-      <img class="header-link-image" src="/buttons/profile.png" />
-      <h4 class="header-link-text">Register</h4>
-    </a>
-    <% } %>
+    <% }) %>
   </div>
+  <% } else { %>
+  <a class="header-link create" href="/account">
+    <img class="header-link-image" src="/buttons/profile.png" />
+    <h4 class="header-link-text">Access Exclusive Features</h4>
+  </a>
+  <% } %>
 </article>
 
 <article class="header-features-container">

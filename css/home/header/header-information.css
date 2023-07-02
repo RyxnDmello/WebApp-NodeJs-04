@@ -58,6 +58,10 @@
   gap: 0.5rem;
 }
 
+.header-link.create {
+  width: fit-content;
+}
+
 .header-link::before {
   background-color: #fff;
   transition: width 300ms;

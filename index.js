@@ -92,7 +92,7 @@ app.post("/weather", (req, res) => {
   };
 
   DatabaseManager.AddLocation(req.session.email, location);
-  res.redirect("/");
+  res.redirect("/#personal");
 });
 
 app.listen(process.env.DEVELOPMENT_PORT, () => {

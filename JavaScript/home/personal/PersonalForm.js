@@ -2,10 +2,12 @@ const locations = document.querySelectorAll(
   ".personal-header-text.current-location"
 );
 const inputs = document.querySelectorAll(".personal-input");
+const refresh = document.querySelector(".personal-form-button.refresh");
 const info = document.querySelector(".personal-form-information");
 
 export default function PersonalForm() {
   ProtectInputs();
+  RefreshStation();
   DisplayInformation();
 }
 
@@ -42,6 +44,14 @@ function DisableCity() {
     inputs[0].classList.remove("input-inactive");
     inputs[0].required = true;
   }
+}
+
+function RefreshStation() {
+  refresh.addEventListener("click", () => {
+    setTimeout(() => {
+      location.reload();
+    }, 160);
+  });
 }
 
 function DisplayInformation() {

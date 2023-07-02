@@ -27,14 +27,38 @@ const PARAMS =
 
 export default function CurrentStation() {
   button.addEventListener("click", async () => {
-    if (city.value.trim().length === 0) return;
-    const weather = await GetWeatherData();
+    if (ValidateInput() === null) return;
+
+    const weather = ValidateInput()
+      ? await GetWeatherByCity()
+      : await GetWeatherByCoordinates();
+
     if (weather === null) return;
+
     SetWeatherData(weather);
   });
 }
 
-async function GetWeatherData() {
+function ValidateInput() {
+  if (
+    city.value.trim().length === 0 &&
+    latitude.value.trim().length === 0 &&
+    longitude.value.trim().length === 0
+  )
+    return null;
+
+  if (city.value.trim().length === 0) return false;
+  return true;
+}
+
+async function GetWeatherByCoordinates() {
+  const API = `${URL}/${latitude.value},${longitude.value}?${PARAMS}`;
+  const response = await fetch(API);
+  const weather = await response.json();
+  return weather;
+}
+
+async function GetWeatherByCity() {
   const API = `${URL}/${city.value}?${PARAMS}`;
   const response = await fetch(API);
   const weather = await response.json();

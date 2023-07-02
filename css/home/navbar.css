@@ -25,7 +25,7 @@ nav {
   grid-auto-flow: column;
   align-items: center;
   display: grid;
-  gap: 2.65rem;
+  gap: 4rem;
 }
 
 .nav-register-link {
@@ -100,7 +100,7 @@ nav {
   filter: drop-shadow(2px 2px 4px #00000080);
   transition: opacity 350ms, translate 350ms;
   opacity: 0.25;
-  width: 25px;
+  width: 26.5px;
 }
 
 /*----------------------------------------*/

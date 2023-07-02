@@ -27,7 +27,7 @@
         "image": "/home/header/user.png"
       }
     },
-    "information": {
+    "info": {
       "header": {
         "title": "CloudSense",
         "description": "Create a list of your favorite cities and monitor their weather details at all times. Always stay updated with the help of our worldwide weather satellites."

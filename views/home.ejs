@@ -34,10 +34,14 @@
         <%- include("./home/current.ejs", { current: current }) %>
       </section>
 
+      <% if(username !== null) { %>
       <section id="personal">
         <%- include("./home/personal.ejs", { personal: personal }) %>
       </section>
+      <% } %>
     </main>
+
+    <footer></footer>
 
     <script type="module" src="/Home.js"></script>
   </body>

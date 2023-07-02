@@ -1,54 +1,13 @@
 <%- include("./navbar.ejs", { username: username, navbar: header.navbar }) %>
 
 <article class="header-information-container">
-  <div class="header-text-container">
-    <h1 class="header-title"><%= header.info.header.title %></h1>
-    <p class="header-description"><%= header.info.header.description %></p>
-  </div>
-
-  <% if(username !== null) { %>
-  <div class="header-links-container">
-    <% header.info.links.forEach((link) => { %>
-    <a class="header-link" href="<%= link.URL %>">
-      <img class="header-link-image" src="<%= link.image %>" />
-      <h4 class="header-link-text"><%= link.text %></h4>
-    </a>
-    <% }) %>
-  </div>
-  <% } else { %>
-  <a class="header-link create" href="/account">
-    <img class="header-link-image" src="/buttons/profile.png" />
-    <h4 class="header-link-text">Access Exclusive Features</h4>
-  </a>
-  <% } %>
+  <%- include("./header/information.ejs", { info: header.information }) %>
 </article>
 
 <article class="header-features-container">
-  <article class="header-features-carousel">
-    <% for(let i = 0; i < 4; i++) { %>
-    <div class="header-feature-slide">
-      <div class="header-feature-point">
-        <img class="header-feature-point-image" src="/home/header/earth.png" />
-        <h2 class="header-feature-point-text">Worldwide Weather</h2>
-      </div>
-
-      <div class="header-feature-point">
-        <h2 class="header-feature-point-text">Accurate Details</h2>
-        <img class="header-feature-point-image" src="/home/header/earth.png" />
-      </div>
-    </div>
-    <% } %>
-  </article>
-
-  <div class="header-features-controller-container">
-    <% for(let i = 0; i < 4; i++) { %>
-    <img
-      src="/buttons/circle-<%= i + 1 %>.png"
-      class="header-feature-slide-option"
-    />
-    <% } %>
-  </div>
+  <%- include("./header/features.ejs", { features: header.features }) %>
 </article>
 
-<img class="header-background-1" src="/home/header/background-1.jpg" />
-<img class="header-background-2" src="/home/header/background-2.jpg" />
+<% header.images.forEach((image, i) => { %>
+<img class="header-background-<%= i + 1 %>" src="<%= image %>" />
+<% }) %>

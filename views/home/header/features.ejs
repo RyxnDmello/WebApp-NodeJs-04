@@ -1,0 +1,26 @@
+<article class="header-features-carousel">
+  <% features.forEach((feature) => { %>
+  <div class="header-feature-slide">
+    <% feature.forEach((point, i) => { if(i === 0) { %>
+    <div class="header-feature-point">
+      <img class="header-feature-point-image" src="<%= point.image %>" />
+      <h2 class="header-feature-point-text"><%= point.title %></h2>
+    </div>
+    <% } else { %>
+    <div class="header-feature-point">
+      <h2 class="header-feature-point-text"><%= point.title %></h2>
+      <img class="header-feature-point-image" src="<%= point.image %>" />
+    </div>
+    <% }}) %>
+  </div>
+  <% }) %>
+</article>
+
+<div class="header-features-controller-container">
+  <% features.forEach((e, i) => { %>
+  <img
+    src="/buttons/circle-<%= i + 1 %>.png"
+    class="header-feature-slide-option"
+  />
+  <% }) %>
+</div>

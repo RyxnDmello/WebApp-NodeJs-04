@@ -93,7 +93,7 @@ nav {
   grid-auto-flow: column;
   align-items: center;
   display: grid;
-  gap: 1.25rem;
+  gap: 1.5rem;
 }
 
 .nav-social-link-image {

@@ -1,0 +1,38 @@
+<a class="footer-title" href="/#header">
+  <img class="footer-title-image" src="/buttons/logo.png" />
+  <h2 class="footer-title-text">CloudSense</h2>
+</a>
+
+<article class="footer-information">
+  <div class="footer-info-header">
+    <h4 class="footer-info-header-text">Your Personal Weather Station</h4>
+    <p class="footer-info-header-description">
+      Powered By VisualCrossing Weather API
+    </p>
+  </div>
+
+  <% const links = username !== null ? footer.links[0] : footer.links[1] %>
+
+  <div class="footer-info-links">
+    <% links.forEach((link) => { %>
+    <a class="footer-info-link" href="<%= link.URL %>">
+      <img class="footer-info-link-image" src="<%= link.image %>" />
+      <p class="footer-info-link-text"><%= link.text %></p>
+    </a>
+    <% }) %>
+  </div>
+</article>
+
+<article class="footer-credits">
+  <h2 class="footer-creator"><span>@</span> Ryan Nolasco D Mello</h2>
+
+  <div class="footer-social-links">
+    <% footer.socials.forEach((social) => { %>
+    <a class="footer-social-link" href="<%= social.URL %>">
+      <img class="footer-social-link-image" src="<%= social.image %>" />
+    </a>
+    <% }) %>
+  </div>
+</article>
+
+<img class="footer-background" src="/home/footer/background.jpg" />

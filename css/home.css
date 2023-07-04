@@ -7,6 +7,7 @@
 @import url("./home/header.css");
 @import url("./home/current.css");
 @import url("./home/personal.css");
+@import url("./home/footer.css");
 
 * {
   scroll-behavior: smooth;

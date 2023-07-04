@@ -25,8 +25,8 @@
 
   <body>
     <header id="header">
-      <%- include("./home/header.ejs", { username: username, header: header })
-      %>
+      <%- include("./home/header.ejs", { username: username, header: home.header
+      }) %>
     </header>
 
     <main>
@@ -41,7 +41,10 @@
       <% } %>
     </main>
 
-    <footer></footer>
+    <footer>
+      <%- include("./home/footer.ejs", { username: username, footer: home.footer
+      }) %>
+    </footer>
 
     <script type="module" src="/Home.js"></script>
   </body>

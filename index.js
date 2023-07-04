@@ -41,7 +41,7 @@ app.get("/", async (req, res) => {
 
   res.render("home", {
     username: req.session.username ?? null,
-    header: HomeTemplate.header,
+    home: HomeTemplate,
     current: CurrentStation,
     personal: PersonalStations,
   });

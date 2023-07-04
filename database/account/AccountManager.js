@@ -1,3 +1,5 @@
+const bcrypt = require("bcrypt");
+
 const AccountModel = require("../models/ModelManager.js");
 
 module.exports.DatabaseCreateAccount = async (account, request, response) => {
@@ -8,10 +10,12 @@ module.exports.DatabaseCreateAccount = async (account, request, response) => {
     return;
   }
 
+  const encryptedPassword = await bcrypt.hash(account.password, 10);
+
   const clientAccount = new AccountModel({
     username: account.username,
     email: account.email,
-    password: account.password,
+    password: encryptedPassword,
     locations: [],
   });
 
@@ -35,7 +39,12 @@ module.exports.DatabaseLoginAccount = async (account, request, response) => {
     return;
   }
 
-  if (databaseAccount.password !== account.password) {
+  const isValidPassword = bcrypt.compare(
+    account.password,
+    databaseAccount.password
+  );
+
+  if (!isValidPassword) {
     response.render("/error/account-invalid-password");
     return;
   }

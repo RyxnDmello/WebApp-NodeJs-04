@@ -2,30 +2,28 @@
 
 # **📂 CloudSense**
 
-CloudSense is a **Weather Web Application** which uses the _VisualCrossing_ Weather API to collect accurate and detailed information related to the current weather. The application has a simple and modern design with a strong server to manage authentication of clients. It uses a database to store the weather data of famous selected cities all around the globe, for easy access for the respective client.
+CloudSense is a **Weather Web Application** which uses the _VisualCrossing_ Weather API to collect accurate and detailed information related to the current weather. The application has a simple and modern design with a strong server to manage the authentication of clients. It uses a database to store the weather data of famous selected cities all around the globe, for easy access for the respective client.
 
-# **🤖 TECHNOLOGY**
+# 🤖 TECHNOLOGY
 
-### **💻 FRONT-END TECHNOLOGY**
+### 🚀 FRAMEWORKS & LIBRARIES
 
-- ✅ Hyper-Text Markup Language (HTML)
-- ✅ Cascading Stylesheet (CSS)
-- ✅ JavaScript (Js)
+| ✏️ FRONT-END TECHNOLOGIES | ⚒️ BACK-END TECHNOLOGIES | 🗃️ DATABASE & LIBRARIES |
+| :- | :- | :- |
+| ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white) | ![NodeJS](https://img.shields.io/badge/node.js-darkgreen?style=for-the-badge&logo=node.js&logoColor=white) | ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94f.svg?style=for-the-badge&logo=mongodb&logoColor=white) |
+| ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white) | ![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB) | ![Mongoose](https://img.shields.io/badge/mongoose-%23DD0031.svg?style=for-the-badge&logoColor=white) |
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) | ![Nodemon](https://img.shields.io/badge/NODEMON-%23323330.svg?style=for-the-badge&logo=nodemon&logoColor=%BBDEAD)| |
+| | ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white) |
 
-### **💻 BACK-END TECHNOLOGY**
+### 💻 PLATFORM & EDITOR
 
-- ✅ Node Js (Framework)
-- ✅ Express Js (Server-Side Library)
-- ✅ Mongoose (Express Js Library)
-
-### **💻 DATABASE & TOOLS**
-
-- ✅ MongoDB (Cloud Database)
-- ✅ Mongoose (Express Js Library)
+| 🖥️ PLATFORM | ✏️ EDITOR |
+| :-: | :-: |
+| ![Windows 11](https://img.shields.io/badge/Windows%2011-%230079d5.svg?style=for-the-badge&logo=Windows%2011&logoColor=white) | ![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0008b7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
 
 # **💎 FEEDBACK**
 
-I am a student developer and your feedback would mean the world to me. Your feedback will be highly appreciated and will help me in becoming better in my craft. Feel free to email me.
+I am a student developer and your feedback would mean the world to me. Your feedback will be highly appreciated and will help me in becoming better at my craft. Feel free to email me.
 
 [![gmail](https://img.shields.io/badge/your_feedback_is_appreciated-1f0799?style=for-the-badge&logo=gmail&logoColor=f02114)](mailto:ryanndmello10@gmail.com)
 

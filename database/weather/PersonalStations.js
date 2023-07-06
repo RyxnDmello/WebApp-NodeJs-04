@@ -6,7 +6,13 @@ module.exports.CreatePersonalStations = async (locations) => {
 
   for (let i = 0; i < locations.length; i++) {
     let weather = await GetWeatherData(locations[i]);
-    if (weather !== null) stations.push(WeatherData(weather));
+
+    if (weather !== null) {
+      stations.push({
+        location: locations[i],
+        days: WeatherData(weather),
+      });
+    }
   }
 
   return stations;

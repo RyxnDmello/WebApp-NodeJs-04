@@ -13,7 +13,7 @@ module.exports.DatabaseAddLocation = async (email, location) => {
   );
 };
 
-module.exports.DatabaseRemoveLocation = async (email, location) => {
+module.exports.DatabaseDeleteLocation = async (email, location) => {
   await AccountModel.findOneAndUpdate(
     { email: email },
     { $pull: { locations: location } }

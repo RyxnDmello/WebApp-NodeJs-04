@@ -84,14 +84,27 @@ app.post("/account/:type", (req, res) => {
   }
 });
 
-app.post("/weather", (req, res) => {
-  const location = {
-    city: req.body.city,
-    latitude: req.body.latitude,
-    longitude: req.body.longitude,
-  };
+app.post("/weather/:type", (req, res) => {
+  if (req.params.type === "create") {
+    const location = {
+      city: req.body.city,
+      latitude: req.body.latitude,
+      longitude: req.body.longitude,
+    };
 
-  DatabaseManager.AddLocation(req.session.email, location);
+    DatabaseManager.AddLocation(req.session.email, location);
+  }
+
+  if (req.params.type === "delete") {
+    const location = {
+      city: req.body.city,
+      latitude: req.body.latitude.length === 0 ? null : req.body.latitude,
+      longitude: req.body.longitude.length === 0 ? null : req.body.longitude,
+    };
+
+    DatabaseManager.DeleteLocation(req.session.email, location);
+  }
+
   res.redirect("/#personal");
 });
 

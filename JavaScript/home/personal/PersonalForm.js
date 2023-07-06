@@ -1,6 +1,4 @@
-const locations = document.querySelectorAll(
-  ".personal-header-text.current-location"
-);
+const locations = document.querySelectorAll(".personal-header-location-text");
 const inputs = document.querySelectorAll(".personal-input");
 const refresh = document.querySelector(".personal-form-button.refresh");
 const info = document.querySelector(".personal-form-information");

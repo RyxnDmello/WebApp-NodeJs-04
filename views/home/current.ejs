@@ -1,47 +1,4 @@
-<article class="current-form">
-  <h2 class="current-form-title">QUICK & EASY</h2>
-
-  <div class="current-input-block">
-    <h4 class="current-input-label">City</h4>
-
-    <input
-      class="current-input current-city"
-      placeholder="Required"
-      autocomplete="off"
-      type="text"
-      required
-    />
-  </div>
-
-  <div class="current-input-block">
-    <h4 class="current-input-label">Latitude</h4>
-
-    <input
-      class="current-input current-latitude"
-      placeholder="Optional"
-      autocomplete="off"
-      type="text"
-      required
-    />
-  </div>
-
-  <div class="current-input-block">
-    <h4 class="current-input-label">Longitude</h4>
-
-    <input
-      class="current-input current-longitude"
-      placeholder="Optional"
-      autocomplete="off"
-      type="text"
-      required
-    />
-  </div>
-
-  <a class="current-button" href="#current">
-    <img class="current-button-image" src="/buttons/search.png" />
-    <h4 class="current-button-text">Get Weather</h4>
-  </a>
-</article>
+<article class="current-form"><%- include("./current/form.ejs") %></article>
 
 <article class="current-station">
   <article class="current-station-carousel">

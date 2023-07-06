@@ -18,3 +18,7 @@ module.exports.GetLocations = async (email) => {
 module.exports.AddLocation = (email, location) => {
   LocationManager.DatabaseAddLocation(email, location);
 };
+
+module.exports.DeleteLocation = (email, location) => {
+  LocationManager.DatabaseDeleteLocation(email, location);
+};

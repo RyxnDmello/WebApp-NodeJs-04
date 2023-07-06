@@ -5,7 +5,7 @@
       "class": "current-location"
     },
     {
-      "image": "/home/weather/location.png",
+      "image": "/home/weather/coordinates.png",
       "class": "current-coordinates"
     }
   ],

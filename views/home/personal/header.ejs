@@ -1,19 +1,28 @@
-<% header.forEach((head, index) => { %>
-<div class="personal-header-container">
-  <% if(index === 0) { %>
-  <img class="personal-header-image" src="<%= head.image %>" />
-  <h4 class="personal-header-text <%= head.class %>"><%= head.value %></h4>
-
-  <% } else { %>
-  <img class="personal-header-details-image" src="<%= head.image %>" />
-
-  <div class="personal-header-details">
-    <h4 class="personal-header-details-title">Coordinates</h4>
-
-    <h4 class="personal-header-details-text <%= head.class %>">
-      <%= head.value %>
-    </h4>
-  </div>
-  <% } %>
+<div class="personal-header-location">
+  <img class="personal-header-location-image" src="<%= header[0].image %>" />
+  <h4 class="personal-header-location-text"><%= header[0].value %></h4>
 </div>
-<% }) %>
+
+<article class="personal-header-details-list">
+  <div class="personal-header-coordinates">
+    <img
+      class="personal-header-coordinates-image"
+      src="<%= header[1].image %>"
+    />
+
+    <div class="personal-header-coordinates-block">
+      <h4 class="personal-header-coordinates-title">Coordinates</h4>
+      <h4 class="personal-header-coordinates-text"><%= header[1].value %></h4>
+    </div>
+  </div>
+
+  <form id="personal-delete-button-form" action="/weather/delete" method="post">
+    <input type="hidden" name="city" value="<%= location.city %>" />
+    <input type="hidden" name="latitude" value="<%= location.latitude %>" />
+    <input type="hidden" name="longitude" value="<%= location.longitude %>" />
+
+    <button class="personal-delete-button" type="submit">
+      <img class="personal-delete-button-image" src="/buttons/delete.png" />
+    </button>
+  </form>
+</article>

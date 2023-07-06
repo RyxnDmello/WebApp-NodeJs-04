@@ -4,17 +4,17 @@ const WeatherTemplate = require("../../json/weather.json");
 
 module.exports.WeatherData = (weather) => {
   return [
-    StationTemplate(weather, 0),
-    StationTemplate(weather, 1),
-    StationTemplate(weather, 2),
-    StationTemplate(weather, 3),
-    StationTemplate(weather, 4),
-    StationTemplate(weather, 5),
-    StationTemplate(weather, 6),
+    DailyWeatherTemplate(weather, 0),
+    DailyWeatherTemplate(weather, 1),
+    DailyWeatherTemplate(weather, 2),
+    DailyWeatherTemplate(weather, 3),
+    DailyWeatherTemplate(weather, 4),
+    DailyWeatherTemplate(weather, 5),
+    DailyWeatherTemplate(weather, 6),
   ];
 };
 
-const StationTemplate = (weather, day) => {
+const DailyWeatherTemplate = (weather, day) => {
   return {
     day: GetDate(weather.days[day].datetime),
     header: [

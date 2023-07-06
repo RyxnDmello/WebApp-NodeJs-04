@@ -48,7 +48,7 @@
 /*------------ LOCATION STYLES ------------*/
 /*-----------------------------------------*/
 
-.personal-header-container {
+.personal-header-location {
   justify-content: center;
   grid-auto-flow: column;
   align-items: center;
@@ -56,12 +56,12 @@
   gap: 0.5rem;
 }
 
-.personal-header-image {
+.personal-header-location-image {
   filter: drop-shadow(3px 3px 1.5px #00000060);
   width: 50px;
 }
 
-.personal-header-text {
+.personal-header-location-text {
   text-shadow: 2.5px 2.5px 2.5px #00000080;
   font-family: "Josefin Sans", sans-serif;
   font-size: 2.25rem;
@@ -73,7 +73,32 @@
 /*------------- DETAILS STYLES -------------*/
 /*------------------------------------------*/
 
-.personal-header-details {
+.personal-header-details-list {
+  justify-content: center;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+  gap: 2.5rem;
+}
+
+/*------------------------------------------*/
+/*-------------- COORD STYLES --------------*/
+/*------------------------------------------*/
+
+.personal-header-coordinates {
+  justify-content: center;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.personal-header-coordinates-image {
+  filter: drop-shadow(3px 3px 1.5px #00000060);
+  width: 60px;
+}
+
+.personal-header-coordinates-block {
   grid-template-columns: auto;
   justify-content: center;
   align-items: center;
@@ -81,12 +106,7 @@
   gap: 0.25rem;
 }
 
-.personal-header-details-image {
-  filter: drop-shadow(3px 3px 1.5px #00000060);
-  width: 50px;
-}
-
-.personal-header-details-title {
+.personal-header-coordinates-title {
   text-shadow: 2.5px 2.5px 2.5px #00000080;
   font-family: "Josefin Sans", sans-serif;
   font-weight: 200;
@@ -94,12 +114,36 @@
   color: #fff;
 }
 
-.personal-header-details-text {
+.personal-header-coordinates-text {
   text-shadow: 2.5px 2.5px 2.5px #00000080;
   font-family: "Josefin Sans", sans-serif;
   font-size: 1.5rem;
   font-weight: 200;
   color: #9d9d9d;
+}
+
+/*-----------------------------------------*/
+/*------------- DELETE BUTTON -------------*/
+/*-----------------------------------------*/
+
+.personal-delete-button-form {
+  grid-template-columns: auto;
+  justify-content: stretch;
+  align-items: stretch;
+  display: grid;
+}
+
+.personal-delete-button {
+  background-color: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+
+.personal-delete-button-image {
+  transition: scale 350ms, opacity 350ms, translate 125ms;
+  filter: drop-shadow(3px 3px 1.5px #00000060);
+  opacity: 0.65;
+  width: 50px;
 }
 
 /*---------------------------------------*/
@@ -136,6 +180,15 @@
 .personal-expand-button:hover,
 .personal-collapse-button:hover {
   scale: 1.1;
+}
+
+.personal-delete-button:hover .personal-delete-button-image {
+  opacity: 1;
+  scale: 1.1;
+}
+
+.personal-delete-button:focus .personal-delete-button-image {
+  translate: 0 -5px;
 }
 
 /*--------------------------------------------*/

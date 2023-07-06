@@ -113,8 +113,8 @@
         },
         {
           "image": "/buttons/add.png",
-          "text": "Access Exclusive Features",
-          "URL": "/#personal"
+          "URL": "/#personal",
+          "text": "Create"
         }
       ],
       [

@@ -1,6 +1,6 @@
 <h2 class="personal-title">YOUR PERSONAL STATIONS</h2>
 
-<form id="personal-form" action="/weather" method="post">
+<form id="personal-form" action="/weather/create" method="post">
   <%- include("./personal/form.ejs") %>
 </form>
 
@@ -10,11 +10,12 @@
     <img class="personal-background" src="/home/weather/test-1.jpg" />
 
     <article class="personal-header">
-      <%- include("./personal/header.ejs", { header: station[0].header } ) %>
+      <%- include("./personal/header.ejs", { header: station.days[0].header,
+      location: station.location }) %>
     </article>
 
     <article class="personal-features-carousel">
-      <% station.forEach((day, index) => { %>
+      <% station.days.forEach((day, index) => { %>
       <article class="personal-features">
         <%- include("./personal/card.ejs", { card: day.cards[0] }) %>
 
@@ -28,7 +29,7 @@
     </article>
 
     <article class="personal-controller">
-      <% station.forEach((day) => { %>
+      <% station.days.forEach((day) => { %>
       <h1 class="personal-controller-button"><%= day.day %></h1>
       <% }) %>
     </article>

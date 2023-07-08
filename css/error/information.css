@@ -1,0 +1,138 @@
+/*----------------------------------------------*/
+/*---------------- ERROR STYLES ----------------*/
+/*----------------------------------------------*/
+
+#error {
+  background-color: #00000050;
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  height: 100vh;
+  display: grid;
+}
+
+.error-background {
+  position: absolute;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  top: 0;
+}
+
+.error-information {
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  gap: 2rem;
+}
+
+/*---------------------------------------*/
+/*------------ HEADER STYLES ------------*/
+/*---------------------------------------*/
+
+.error-header {
+  grid-template-columns: auto;
+  justify-content: center;
+  align-items: center;
+  cursor: default;
+  display: grid;
+}
+
+.error-code {
+  text-shadow: 0 2.5px 6px #000000a0;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: -1rem;
+  text-align: center;
+  font-size: 8.5rem;
+  font-weight: 200;
+  color: #fff;
+}
+
+.error-message {
+  font-family: "Josefin Sans", sans-serif;
+  text-shadow: 0 2.5px 6px #000000a0;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 200;
+  color: #cfcfcf;
+}
+
+/*---------------------------------------*/
+/*------------- LINK STYLES -------------*/
+/*---------------------------------------*/
+
+.error-links {
+  justify-content: center;
+  grid-auto-flow: column;
+  align-items: center;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.error-link {
+  box-shadow: 0 2.5px 5px #000000a0;
+  transition: translate 125ms;
+  border: 2px solid #fff;
+  justify-content: center;
+  padding: 0.25rem 2.5rem;
+  grid-auto-flow: column;
+  border-radius: 2.5px;
+  align-items: center;
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.error-link::before {
+  background-color: #fff;
+  transition: width 350ms;
+  position: absolute;
+  height: 100%;
+  content: "";
+  z-index: -1;
+  width: 0%;
+  left: 0;
+}
+
+.error-link-image {
+  transition: filter 350ms;
+  width: 22px;
+}
+
+.error-link-text {
+  font-family: "Poppins", sans-serif;
+  transition: color 350ms;
+  letter-spacing: 0.5px;
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #fff;
+}
+
+/*-------------------------------------------*/
+/*--------------- TRANSITIONS ---------------*/
+/*-------------------------------------------*/
+
+.error-link:hover::before {
+  width: 100%;
+}
+
+.error-link:hover .error-link-image {
+  filter: invert(1);
+}
+
+.error-link:hover .error-link-text {
+  color: #000;
+}
+
+.error-link:focus {
+  translate: 0 5px;
+}
+
+/*--------------------------------------------*/
+/*---------------- END OF CSS ----------------*/
+/*--------------------------------------------*/

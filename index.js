@@ -8,6 +8,7 @@ const WeatherManager = require("./database/WeatherManager.js");
 
 const HomeTemplate = require("./json/home.json");
 const RegisterTemplate = require("./json/register.json");
+const ErrorTemplate = require("./json/error.json");
 
 const app = express();
 
@@ -53,8 +54,34 @@ app.get("/account", (req, res) => {
   });
 });
 
+app.get("/error/:type", (req, res) => {
+  if (req.session) req.session.destroy();
+
+  if (req.params.type === "account-absent") {
+    res.render("error", { error: ErrorTemplate.accountAbsent });
+    return;
+  }
+
+  if (req.params.type === "account-present") {
+    res.render("error", { error: ErrorTemplate.accountPresent });
+    return;
+  }
+
+  if (req.params.type === "account-invalid-password") {
+    res.render("error", { error: ErrorTemplate.accountInvalidPassword });
+    return;
+  }
+
+  if (req.params.type === "server-down") {
+    res.render("error", { error: ErrorTemplate.serverDown });
+    return;
+  }
+
+  res.render("error", { error: ErrorTemplate.lost });
+});
+
 app.get("*", (req, res) => {
-  res.send("INVALID ROUTE");
+  res.render("error", { error: ErrorTemplate.lost });
 });
 
 /*---------------------------------------*/

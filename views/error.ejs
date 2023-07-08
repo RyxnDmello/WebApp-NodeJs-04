@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- #region Google Fonts Server -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- #endregion -->
+    <!-- #region Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- #endregion -->
+    <link rel="stylesheet" href="/error.css" />
+    <title>CloudSense | Error</title>
+  </head>
+
+  <body>
+    <main>
+      <section id="error">
+        <article class="error-information">
+          <div class="error-header">
+            <h4 class="error-code">ERROR <%= error.header.code %></h4>
+            <h4 class="error-message"><%= error.header.message %></h4>
+          </div>
+
+          <div class="error-links">
+            <% error.links.forEach((link) => { %>
+            <a class="error-link" href="<%= link.URL %>">
+              <img class="error-link-image" src="<%= link.image %>" />
+              <p class="error-link-text"><%= link.text %></p>
+            </a>
+            <% }) %>
+          </div>
+        </article>
+
+        <img class="error-background" src="/error/background.jpg" />
+      </section>
+    </main>
+  </body>
+</html>

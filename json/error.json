@@ -1,0 +1,92 @@
+{
+  "serverDown": {
+    "header": {
+      "code": "500",
+      "message": "THE SERVER IS DOWN"
+    },
+    "links": [
+      {
+        "image": "/buttons/home.png",
+        "text": "Home",
+        "URL": "/"
+      },
+      {
+        "image": "/buttons/profile.png",
+        "text": "Login",
+        "URL": "/account"
+      }
+    ]
+  },
+  "accountAbsent": {
+    "header": {
+      "code": "401",
+      "message": "ACCOUNT DOES NOT EXIST"
+    },
+    "links": [
+      {
+        "image": "/buttons/home.png",
+        "text": "Home",
+        "URL": "/"
+      },
+      {
+        "image": "/buttons/profile.png",
+        "text": "Register",
+        "URL": "/account"
+      }
+    ]
+  },
+  "accountPresent": {
+    "header": {
+      "code": "401",
+      "message": "ACCOUNT ALREADY EXISTS"
+    },
+    "links": [
+      {
+        "image": "/buttons/home.png",
+        "text": "Home",
+        "URL": "/"
+      },
+      {
+        "image": "/buttons/login.png",
+        "text": "Login",
+        "URL": "/account"
+      }
+    ]
+  },
+  "accountInvalidPassword": {
+    "header": {
+      "code": "401",
+      "message": "THE PASSWORD IS INVALID"
+    },
+    "links": [
+      {
+        "image": "/buttons/home.png",
+        "text": "Home",
+        "URL": "/"
+      },
+      {
+        "image": "/buttons/login.png",
+        "text": "Login",
+        "URL": "/account"
+      }
+    ]
+  },
+  "lost": {
+    "header": {
+      "code": "404",
+      "message": "OOPS, ARE YOU LOST?"
+    },
+    "links": [
+      {
+        "image": "/buttons/home.png",
+        "text": "Home",
+        "URL": "/"
+      },
+      {
+        "image": "/buttons/profile.png",
+        "text": "Register",
+        "URL": "/account"
+      }
+    ]
+  }
+}

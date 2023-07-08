@@ -6,7 +6,7 @@ module.exports.DatabaseCreateAccount = async (account, request, response) => {
   const databaseAccount = await AccountModel.findOne({ email: account.email });
 
   if (databaseAccount !== null) {
-    response.render("/error/account-present");
+    response.redirect("/error/account-present");
     return;
   }
 
@@ -22,7 +22,7 @@ module.exports.DatabaseCreateAccount = async (account, request, response) => {
   const error = await clientAccount.save();
 
   if (error.email !== account.email) {
-    response.render("/error/database-down");
+    response.redirect("/error/server-down");
     return;
   }
 
@@ -35,7 +35,7 @@ module.exports.DatabaseLoginAccount = async (account, request, response) => {
   const databaseAccount = await AccountModel.findOne({ email: account.email });
 
   if (databaseAccount === null) {
-    response.render("/error/account-absent");
+    response.redirect("/error/account-absent");
     return;
   }
 
@@ -45,7 +45,7 @@ module.exports.DatabaseLoginAccount = async (account, request, response) => {
   );
 
   if (!isValidPassword) {
-    response.render("/error/account-invalid-password");
+    response.redirect("/error/account-invalid-password");
     return;
   }
 

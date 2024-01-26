@@ -3,10 +3,8 @@
   <p class="header-description"><%= info.header.description %></p>
 </div>
 
-<% const i = username !== null ? 0 : 1 %>
-
 <div class="header-links-container">
-  <% info.links[i].forEach((link) => { %>
+  <% info.links[username !== undefined ? 0 : 1].forEach((link) => { %>
   <a class="header-link" href="<%= link.URL %>">
     <img class="header-link-image" src="<%= link.image %>" />
     <h4 class="header-link-text"><%= link.text %></h4>

@@ -1,23 +1,5 @@
 {
-  "serverDown": {
-    "header": {
-      "code": "500",
-      "message": "THE SERVER IS DOWN"
-    },
-    "links": [
-      {
-        "image": "/buttons/home.png",
-        "text": "Home",
-        "URL": "/"
-      },
-      {
-        "image": "/buttons/profile.png",
-        "text": "Login",
-        "URL": "/account"
-      }
-    ]
-  },
-  "accountAbsent": {
+  "account-absent": {
     "header": {
       "code": "401",
       "message": "ACCOUNT DOES NOT EXIST"
@@ -31,11 +13,11 @@
       {
         "image": "/buttons/profile.png",
         "text": "Register",
-        "URL": "/account"
+        "URL": "/register"
       }
     ]
   },
-  "accountPresent": {
+  "account-present": {
     "header": {
       "code": "401",
       "message": "ACCOUNT ALREADY EXISTS"
@@ -49,11 +31,11 @@
       {
         "image": "/buttons/login.png",
         "text": "Login",
-        "URL": "/account"
+        "URL": "/register"
       }
     ]
   },
-  "accountInvalidPassword": {
+  "invalid-password": {
     "header": {
       "code": "401",
       "message": "THE PASSWORD IS INVALID"
@@ -67,7 +49,25 @@
       {
         "image": "/buttons/login.png",
         "text": "Login",
-        "URL": "/account"
+        "URL": "/register"
+      }
+    ]
+  },
+  "server-down": {
+    "header": {
+      "code": "500",
+      "message": "THE SERVER IS DOWN"
+    },
+    "links": [
+      {
+        "image": "/buttons/home.png",
+        "text": "Home",
+        "URL": "/"
+      },
+      {
+        "image": "/buttons/profile.png",
+        "text": "Login",
+        "URL": "/register"
       }
     ]
   },
@@ -85,7 +85,7 @@
       {
         "image": "/buttons/profile.png",
         "text": "Register",
-        "URL": "/account"
+        "URL": "/register"
       }
     ]
   }

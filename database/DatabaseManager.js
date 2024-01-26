@@ -1,24 +1,13 @@
-const AccountManager = require("./account/AccountManager.js");
-const LocationManager = require("./account/LocationManager.js");
+require("dotenv").config();
 
-module.exports.CreateAccount = (account, request, response) => {
-  AccountManager.DatabaseCreateAccount(account, request, response);
-};
+const mongoose = require("mongoose");
 
-module.exports.LoginAccount = (account, request, response) => {
-  AccountManager.DatabaseLoginAccount(account, request, response);
-};
-
-module.exports.GetLocations = async (email) => {
-  return email !== undefined
-    ? await LocationManager.DatabaseGetLocations(email)
-    : [];
-};
-
-module.exports.AddLocation = (email, location) => {
-  LocationManager.DatabaseAddLocation(email, location);
-};
-
-module.exports.DeleteLocation = (email, location) => {
-  LocationManager.DatabaseDeleteLocation(email, location);
+module.exports.ConnectDatabase = async () => {
+  await mongoose.connect(
+    `${process.env.DATABASE_URI}/${process.env.DATABASE}`,
+    {
+      retryWrites: true,
+      retryReads: true,
+    }
+  );
 };

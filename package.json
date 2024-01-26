@@ -2,14 +2,15 @@
   "name": "cloud-sense",
   "version": "1.0.0",
   "description": "Weather Web Application",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "cls && node --version && npm --version && npm list"
+    "run": "cls & nodemon app.js",
+    "test": "cls & node --version & npm --version & npm list"
   },
   "keywords": [
     "Weather"
   ],
-  "author": "Ryan D Mello",
+  "author": "Ryan Nolasco D Mello",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.1.0",

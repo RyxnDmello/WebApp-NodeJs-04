@@ -12,8 +12,8 @@
       <% }) %>
     </div>
 
-    <% if(username === null) { %>
-    <a href="/account" class="nav-register-link">
+    <% if(username === undefined) { %>
+    <a href="/register" class="nav-register-link">
       <img class="nav-register-link-image" src="/buttons/profile.png" />
       <h4 class="nav-register-link-text">Register</h4>
     </a>

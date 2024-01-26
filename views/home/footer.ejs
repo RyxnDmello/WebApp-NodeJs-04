@@ -11,7 +11,7 @@
     </p>
   </div>
 
-  <% const links = username !== null ? footer.links[0] : footer.links[1] %>
+  <% const links = username !== undefined ? footer.links[0] : footer.links[1] %>
 
   <div class="footer-info-links">
     <% links.forEach((link) => { %>

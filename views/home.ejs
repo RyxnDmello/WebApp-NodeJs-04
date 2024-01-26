@@ -25,26 +25,22 @@
 
   <body>
     <header id="header">
-      <%- include("./home/header.ejs", { username: username, header: home.header
-      }) %>
+      <%- include("./home/header.ejs", { username, header }) %>
     </header>
 
     <main>
       <section id="current">
-        <%- include("./home/current.ejs", { current: current }) %>
+        <%- include("./home/current.ejs", { current }) %>
       </section>
 
-      <% if(username !== null) { %>
+      <% if(username !== undefined) { %>
       <section id="personal">
-        <%- include("./home/personal.ejs", { personal: personal }) %>
+        <%- include("./home/personal.ejs", { personal }) %>
       </section>
       <% } %>
     </main>
 
-    <footer>
-      <%- include("./home/footer.ejs", { username: username, footer: home.footer
-      }) %>
-    </footer>
+    <footer><%- include("./home/footer.ejs", { username, footer }) %></footer>
 
     <script type="module" src="/Home.js"></script>
   </body>

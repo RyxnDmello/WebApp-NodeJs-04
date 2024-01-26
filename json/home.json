@@ -21,7 +21,7 @@
       ],
       "register": {
         "image": "/buttons/profile.png",
-        "URL": "/account"
+        "URL": "/register"
       },
       "user": {
         "image": "/home/header/user.png"
@@ -54,7 +54,7 @@
           {
             "image": "/buttons/profile.png",
             "text": "Access Exclusive Features",
-            "URL": "/account"
+            "URL": "/register"
           }
         ]
       ]
@@ -121,7 +121,7 @@
         {
           "image": "/buttons/profile.png",
           "text": "Access Exclusive Features",
-          "URL": "/account"
+          "URL": "/register"
         }
       ]
     ],
